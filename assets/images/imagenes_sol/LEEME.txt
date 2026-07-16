@@ -1,0 +1,16 @@
+Imágenes realistas separadas para las cards
+
+Estas imágenes son recortes individuales de las imágenes que estaban dentro de las cards del diseño generado.
+
+Incluye PNG y WEBP:
+- instrumentos_medicion_realista
+- mro_realista
+- soluciones_filtracion_realista
+- herramientas_corte_realista
+- abrasivos_realista
+- compras_logistica_realista
+
+Recomendación:
+Usa WEBP en la página para mejor peso/calidad y deja PNG como respaldo.
+
+Tamaño de cada imagen: 1200 x 520 px.

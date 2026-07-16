@@ -1,0 +1,12 @@
+Logos vectorizados para web
+
+Incluye:
+- SVG vectorizados: gm_logo.svg, mabe_logo.svg, nicdec_logo.svg, stellantis_logo.svg
+- PNG limpios con fondo transparente como respaldo
+- preview_logos.html para verlos en navegador
+
+Uso recomendado en HTML:
+<img src="assets/logos/gm_logo.svg" alt="GM" class="client-logo">
+
+Nota:
+Esta es una vectorización automática desde imágenes raster. Para uso final de marca, valida que el resultado coincida con el manual de identidad de cada empresa y usa los logos con autorización correspondiente.
