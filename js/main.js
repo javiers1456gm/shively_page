@@ -31,29 +31,10 @@ pdfModal.addEventListener('hidden.bs.modal',()=>{
   pdfFrame.src='about:blank';
 });
 
-const contactForm=document.getElementById('contactForm');
-if(contactForm){
-  contactForm.addEventListener('submit',(event)=>{
+const contactButton=document.getElementById('contactButton');
+if(contactButton){
+  contactButton.addEventListener('click',(event)=>{
     event.preventDefault();
-    const formData=new FormData(contactForm);
-    const nombre=formData.get('Nombre')?.toString().trim() || '';
-    const empresa=formData.get('Empresa')?.toString().trim() || '';
-    const correo=formData.get('Correo')?.toString().trim() || '';
-    const telefono=formData.get('Telefono')?.toString().trim() || '';
-    const mensaje=formData.get('Mensaje')?.toString().trim() || '';
-
-    const subject=`Solicitud web - ${nombre || 'Cliente'}`;
-    const body=[
-      `Nombre: ${nombre}`,
-      `Empresa: ${empresa}`,
-      `Correo: ${correo}`,
-      `Teléfono: ${telefono}`,
-      '',
-      'Mensaje:',
-      `${mensaje}`
-    ].join('\n');
-
-    const mailtoUrl=`mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href=mailtoUrl;
+    window.location.href='mailto:ventasmx@shivelybros.com?subject=Solicitud%20de%20informaci%C3%B3n';
   });
 }

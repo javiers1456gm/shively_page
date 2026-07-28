@@ -753,10 +753,13 @@
 
  .contact-form {
    background: rgba(255, 255, 255, .94);
-   border-radius: 26px;
-   padding: 34px;
-   box-shadow: 0 20px 70px rgba(17, 24, 39, .14);
-   border: 1px solid rgba(17, 24, 39, .08)
+   border-radius: 22px;
+   padding: 16px 22px;
+   box-shadow: 0 14px 40px rgba(17, 24, 39, .12);
+   border: 10px solid rgba(17, 24, 39, .08);
+   max-width: 320px;
+   margin-left: auto;
+   margin-right: auto;
  }
 
  .form-control {
