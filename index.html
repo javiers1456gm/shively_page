@@ -332,11 +332,30 @@
             </div>
           </div>
           <div class="col-lg-7 reveal">
-            <div class="contact-form d-flex justify-content-center align-items-center">
-              <a id="contactButton" class="btn btn-sb btn-lg"
-                href="mailto:ventasmx@shivelybros.com?subject=Solicitud%20de%20informaci%C3%B3n" role="button">
-                Enviar mensaje <i class="bi bi-send ms-2"></i>
-              </a>
+            <div class="contact-form">
+              <form id="contactForm" class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="contactName" name="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactCompany" class="form-label">Empresa</label>
+                  <input type="text" class="form-control" id="contactCompany" name="company" required>
+                </div>
+                <div class="col-12">
+                  <label for="contactEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="contactEmail" name="email" required>
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-sb btn-lg">
+                    Enviar mensaje <i class="bi bi-send ms-2"></i>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

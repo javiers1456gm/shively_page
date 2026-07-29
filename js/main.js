@@ -31,10 +31,22 @@ pdfModal.addEventListener('hidden.bs.modal',()=>{
   pdfFrame.src='about:blank';
 });
 
-const contactButton=document.getElementById('contactButton');
-if(contactButton){
-  contactButton.addEventListener('click',(event)=>{
+const contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',(event)=>{
     event.preventDefault();
-    window.location.href='mailto:ventasmx@shivelybros.com?subject=Solicitud%20de%20informaci%C3%B3n';
+    const name=document.getElementById('contactName').value.trim();
+    const company=document.getElementById('contactCompany').value.trim();
+    const email=document.getElementById('contactEmail').value.trim();
+    const message=document.getElementById('contactMessage').value.trim();
+    const subject='Solicitud de información';
+    const body=[
+      `Nombre;: ${name}`,
+      `Empresa: ${company}`,
+      `Correo: ${email}`,
+      `Mensaje: ${message}`
+    ].join('\r\n');
+    const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
   });
 }
