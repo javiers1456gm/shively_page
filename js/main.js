@@ -50,3 +50,58 @@ if(contactForm){
     window.location.href = mailto;
   });
 }
+
+/* SECTION: Cobertura Comercial - Interactividad de pins y zonas */
+const locationMapCard = document.querySelector('.map-interactive-card');
+const zoneCards = document.querySelectorAll('.location-zone-card');
+const mapPins = document.querySelectorAll('.map-pin');
+const pinWrappers = document.querySelectorAll('.pin-wrapper');
+
+function resetZoneHighlight() {
+  locationMapCard?.classList.remove('zona-norte', 'zona-noroeste', 'zona-bajio', 'zona-centro', 'zona-centro-sur');
+  mapPins.forEach(pin => pin.classList.remove('highlighted'));
+  zoneCards.forEach(card => card.classList.remove('active'));
+}
+
+function clearActivePins() {
+  pinWrappers.forEach(wrapper => wrapper.classList.remove('active'));
+}
+
+zoneCards.forEach(card => {
+  const zone = card.dataset.zone;
+  card.addEventListener('pointerenter', () => {
+    resetZoneHighlight();
+    locationMapCard?.classList.add(zone);
+    card.classList.add('active');
+    document.querySelectorAll(`.map-pin[data-zone="${zone}"]`).forEach(pin => pin.classList.add('highlighted'));
+  });
+
+  card.addEventListener('pointerleave', () => {
+    resetZoneHighlight();
+  });
+
+  card.addEventListener('click', () => {
+    resetZoneHighlight();
+    locationMapCard?.classList.add(zone);
+    document.querySelectorAll(`.map-pin[data-zone="${zone}"]`).forEach(pin => pin.classList.add('highlighted'));
+    card.classList.add('active');
+  });
+});
+
+mapPins.forEach(pin => {
+  pin.addEventListener('click', event => {
+    event.stopPropagation();
+    const wrapper = pin.closest('.pin-wrapper');
+    const isActive = wrapper?.classList.contains('active');
+    clearActivePins();
+    if (!isActive && wrapper) {
+      wrapper.classList.add('active');
+    }
+  });
+});
+
+window.addEventListener('click', event => {
+  if (!event.target.closest('.pin-wrapper') && !event.target.closest('.location-zone-card')) {
+    clearActivePins();
+  }
+});
