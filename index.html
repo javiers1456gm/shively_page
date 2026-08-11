@@ -43,7 +43,21 @@
       <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#productos">Soluciones</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#productos" id="solucionesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Soluciones
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="solucionesDropdown">
+              <li><a class="dropdown-item" href="#productos">Todos</a></li>
+              <li><a class="dropdown-item" href="pages/instrumentos_de_medicion.html">Instrumentos de Medición</a></li>
+              <li><a class="dropdown-item" href="pages/herramientas_de_corte.html">Herramientas de Corte</a></li>
+              <li><a class="dropdown-item" href="pages/abrasivos.html">Abrasivos</a></li>
+              <li><a class="dropdown-item" href="pages/mro.html">MRO</a></li>
+              <li><a class="dropdown-item" href="pages/soluciones_para_filtracion.html">Soluciones para Filtración</a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
           <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="#contacto">Contacto</a></li>
@@ -54,7 +68,7 @@
 
   <header id="inicio" class="hero-section">
     <div class="container position-relative">
-      <div class="row align-items-center min-vh-100 py-5">
+      <div class="row align-items-center min-vh-100 py-5 g-lg-5">
 
         <div class="col-lg-7">
           <br>
@@ -76,6 +90,45 @@
             <div><strong>Industria</strong><span>Manufactura y producción</span></div>
           </div>
         </div>
+
+        <div class="col-lg-5">
+          <div class="hero-lead-card reveal">
+            <div class="hero-lead-header">
+              <span class="section-label light">Cotización rápida</span>
+              <h3>Solicita una propuesta para tu planta</h3>
+            </div>
+            <form id="heroLeadForm" class="hero-lead-form">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="heroLeadName">Nombre</label>
+                  <input id="heroLeadName" type="text" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="heroLeadCompany">Empresa</label>
+                  <input id="heroLeadCompany" type="text" name="company" placeholder="Empresa" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="heroLeadPhone">Teléfono</label>
+                  <input id="heroLeadPhone" type="tel" name="phone" placeholder="(844) 000 0000" required>
+                </div>
+                <div class="col-12">
+                  <label for="heroLeadEmail">Correo</label>
+                  <input id="heroLeadEmail" type="email" name="email" placeholder="correo@empresa.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="heroLeadMessage">Necesidad</label>
+                  <textarea id="heroLeadMessage" name="message" rows="4" placeholder="Cuéntanos qué necesitas..."
+                    required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-sb btn-lg" style="width: 100%;">
+                    Enviar mensaje <i class="bi bi-send ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -93,60 +146,108 @@
           </div>
         </div>
         <div class="product-grid">
-          <a class="product-card reveal" href="#"
-            data-pdf="assets/pdf/ShivelyBros_Categoria_Instrumentos_de_Medicion.pdf"
-            data-title="Instrumentos de Medición" title="Ver PDF de Instrumentos de Medición">
+          <div class="product-card reveal">
             <img src="assets/images/imagenes_sol/instrumentos_medicion_realista.webp" alt="Instrumentos de Medición"
               class="product-img">
-            <div><i class="bi bi-rulers"></i>
+            <div class="product-card-body">
+              <i class="bi bi-rulers"></i>
               <h3>Instrumentos de Medición</h3>
               <p>Equipos para inspección, control dimensional y calidad.</p>
             </div>
-          </a>
-          <a class="product-card reveal" href="#" data-pdf="assets/pdf/ShivelyBros_Categoria_MRO.pdf" data-title="MRO"
-            title="Ver PDF de MRO">
+            <br>
+            <br>
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/instrumentos_de_medicion.html"
+                title="Ver landing de Instrumentos de Medición">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary"
+                href="assets/pdf/ShivelyBros_Categoria_Instrumentos_de_Medicion.pdf" target="_blank" rel="noopener"
+                download title="Descargar PDF de Instrumentos de Medición">Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
             <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=700&q=80"
               alt="MRO" class="product-img">
-            <div><i class="bi bi-boxes"></i>
+            <div class="product-card-body">
+              <i class="bi bi-boxes"></i>
               <h3>MRO</h3>
               <p>Suministros de mantenimiento, reparación y operación con respaldo de calidad.</p>
             </div>
-          </a>
-          <a class="product-card reveal" href="#" data-pdf="assets/pdf/ShivelyBros_Categoria_Filtracion.pdf"
-            data-title="Soluciones para Filtración" title="Ver PDF de Soluciones para Filtración">
+            <br>
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/mro.html"
+                title="Ver landing de MRO">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary" href="assets/pdf/ShivelyBros_Categoria_MRO.pdf"
+                target="_blank" rel="noopener" download title="Descargar PDF de MRO">Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
             <img src="assets/images/imagenes_sol/soluciones_filtracion_realista.webp" alt="Soluciones para Filtración"
               class="product-img">
-            <div><i class="bi bi-droplet-half"></i>
+            <div class="product-card-body">
+              <i class="bi bi-droplet-half"></i>
               <h3>Soluciones para Filtración</h3>
               <p>Productos y sistemas para filtración de aire, líquidos y procesos industriales.</p>
             </div>
-          </a>
-          <a class="product-card reveal" href="#" data-pdf="assets/pdf/ShivelyBros_Categoria_Herramientas_de_Corte.pdf"
-            data-title="Herramientas de Corte" title="Ver PDF de Herramientas de Corte">
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/soluciones_para_filtracion.html"
+                title="Ver landing de Soluciones para Filtración">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary"
+                href="assets/pdf/ShivelyBros_Categoria_Filtracion.pdf" target="_blank" rel="noopener" download
+                title="Descargar PDF de Soluciones para Filtración">Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
             <img src="assets/images/imagenes_sol/herramientas_corte_realista.webp" alt="Herramientas de Corte"
               class="product-img">
-            <div><i class="bi bi-tools"></i>
+            <div class="product-card-body">
+              <i class="bi bi-tools"></i>
               <h3>Herramientas de Corte</h3>
               <p>Soluciones para maquinado, corte, perforado y procesos de precisión.</p>
             </div>
-          </a>
-          <a class="product-card reveal" href="#" data-pdf="assets/pdf/ShivelyBros_Categoria_Abrasivos.pdf"
-            data-title="Abrasivos" title="Ver PDF de Abrasivos">
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/herramientas_de_corte.html"
+                title="Ver landing de Herramientas de Corte">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary"
+                href="assets/pdf/ShivelyBros_Categoria_Herramientas_de_Corte.pdf" target="_blank" rel="noopener"
+                download title="Descargar PDF de Herramientas de Corte">Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
             <img src="assets/images/imagenes_sol/abrasivos_realista.webp" alt="Abrasivos" class="product-img">
-            <div><i class="bi bi-disc"></i>
+            <div class="product-card-body">
+              <i class="bi bi-disc"></i>
               <h3>Abrasivos</h3>
               <p>Productos para desbaste, acabado y preparación de superficies.</p>
             </div>
-          </a>
-          <a class="product-card reveal" href="#" data-pdf="assets/pdf/ShivelyBros_Categoria_Compras_y_Logistica.pdf"
-            data-title="Compras y logística" title="Ver PDF de Compras y logística">
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/abrasivos.html"
+                title="Ver landing de Abrasivos">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary"
+                href="assets/pdf/ShivelyBros_Categoria_Abrasivos.pdf" target="_blank" rel="noopener" download
+                title="Descargar PDF de Abrasivos">Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
             <img src="assets/images/imagenes_sol/compras_logistica_realista.webp" alt="Compras y logística"
               class="product-img">
-            <div><i class="bi bi-truck"></i>
+            <div class="product-card-body">
+              <i class="bi bi-truck"></i>
               <h3>Compras y logística</h3>
               <p>Servicios de procurement y logística para asegurar entrega oportuna y eficiente.</p>
             </div>
-          </a>
+            <div class="product-card-actions">
+              <a class="product-card-btn product-card-btn--primary" href="pages/compras_y_logistica.html"
+                title="Ver landing de Compras y logística">Ver</a>
+              <a class="product-card-btn product-card-btn--secondary"
+                href="assets/pdf/ShivelyBros_Categoria_Compras_y_Logistica.pdf" target="_blank" rel="noopener" download
+                title="Descargar PDF de Compras y logística">Descargar PDF</a>
+            </div>
+          </div>
         </div>
 
 
@@ -155,8 +256,8 @@
 
     <section id="nosotros" class="section-padding about-section">
       <div class="container">
-        <div class="row g-4 g-lg-5 about-layout">
-          <div class="col-lg-7 reveal">
+        <div class="about-story-shell">
+          <div class="about-story-copy reveal">
             <div class="about-content">
               <span class="section-label">Nosotros</span>
               <h2 class="section-title">La historia de Shively Bros</h2>
@@ -165,8 +266,8 @@
                 la empresa se distinguió por combinar cercanía con el cliente, disponibilidad de productos y asesoría
                 técnica especializada.</p>
               <p class="section-text">Con el paso de las décadas, Shively Bros creció más allá del comercio de piezas:
-                se
-                convirtió en un socio de producción capaz de ofrecer herramientas de corte, productos MRO, sistemas de
+                se convirtió en un socio de producción capaz de ofrecer herramientas de corte, productos MRO, sistemas
+                de
                 abastecimiento y servicios de ingeniería. Esta evolución le permitió apoyar a fabricantes de distintos
                 sectores a reducir paros, optimizar inventarios y mantener operaciones más seguras y eficientes.</p>
               <p class="section-text">Hoy, con más de 75 años de experiencia, mantenemos la misma filosofía que nos hizo
@@ -175,32 +276,33 @@
                 industria manufacturera del país.</p>
             </div>
           </div>
-          <div class="col-lg-5 reveal">
-            <div class="about-side">
-              <div class="about-image-wrap">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                  alt="Nosotros Shively Bros" class="about-photo-image">
-              </div>
-              <div class="row g-3 about-highlights">
-                <div class="col-sm-6">
-                  <div class="mini-card"><i class="bi bi-geo-alt"></i><strong>Atención en México</strong><span>Cobertura
-                      nacional</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="mini-card"><i class="bi bi-globe-americas"></i><strong>Respaldo
-                      internacional</strong><span>Experiencia corporativa</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="mini-card"><i class="bi bi-box-seam"></i><strong>Suministro
-                      industrial</strong><span>Productos para operación</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="mini-card"><i class="bi bi-headset"></i><strong>Soporte técnico</strong><span>Asesoría
-                      para
-                      identificar necesidades</span></div>
-                </div>
-              </div>
+
+          <div class="about-story-visual reveal">
+            <div class="about-image-wrap">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+                alt="Nosotros Shively Bros" class="about-photo-image">
             </div>
+          </div>
+        </div>
+
+        <div class="about-story-carousel reveal">
+          <div class="about-story-track">
+            <div class="about-story-card"><i class="bi bi-geo-alt"></i><strong>Atención en
+                México</strong><span>Cobertura nacional</span></div>
+            <div class="about-story-card"><i class="bi bi-globe-americas"></i><strong>Respaldo
+                internacional</strong><span>Experiencia corporativa</span></div>
+            <div class="about-story-card"><i class="bi bi-box-seam"></i><strong>Suministro
+                industrial</strong><span>Productos para operación</span></div>
+            <div class="about-story-card"><i class="bi bi-headset"></i><strong>Soporte técnico</strong><span>Asesoría
+                para identificar necesidades</span></div>
+            <div class="about-story-card"><i class="bi bi-geo-alt"></i><strong>Atención en
+                México</strong><span>Cobertura nacional</span></div>
+            <div class="about-story-card"><i class="bi bi-globe-americas"></i><strong>Respaldo
+                internacional</strong><span>Experiencia corporativa</span></div>
+            <div class="about-story-card"><i class="bi bi-box-seam"></i><strong>Suministro
+                industrial</strong><span>Productos para operación</span></div>
+            <div class="about-story-card"><i class="bi bi-headset"></i><strong>Soporte técnico</strong><span>Asesoría
+                para identificar necesidades</span></div>
           </div>
         </div>
       </div>
@@ -511,7 +613,7 @@
                   <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-end">
-                  <button type="submit" class="btn btn-sb btn-lg">
+                  <button type="submit" class="btn btn-sb btn-lg" style="width: 100%;">
                     Enviar mensaje <i class="bi bi-send ms-2"></i>
                   </button>
                 </div>
@@ -560,6 +662,10 @@
     </div>
   </div>
 
+  <a href="https://wa.me/528443402926" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
   <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>

@@ -48,6 +48,34 @@ if(contactForm){
     ].join('\r\n');
     const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
+    setTimeout(() => {
+      window.location.href = 'gracias.html';
+    }, 250);
+  });
+}
+
+const heroLeadForm=document.getElementById('heroLeadForm');
+if(heroLeadForm){
+  heroLeadForm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    const name=document.getElementById('heroLeadName').value.trim();
+    const company=document.getElementById('heroLeadCompany').value.trim();
+    const email=document.getElementById('heroLeadEmail').value.trim();
+    const phone=document.getElementById('heroLeadPhone').value.trim();
+    const message=document.getElementById('heroLeadMessage').value.trim();
+    const subject='Solicitud de Información';
+    const body=[
+      `Nombre: ${name}`,
+      `Empresa: ${company}`,
+      `Correo: ${email}`,
+      `Teléfono: ${phone}`,
+      `Mensaje: ${message}`
+    ].join('\r\n');
+    const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    setTimeout(() => {
+      window.location.href = 'gracias.html';
+    }, 250);
   });
 }
 

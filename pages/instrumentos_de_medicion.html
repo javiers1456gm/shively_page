@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Metrología e Instrumentos de Medición Shively Bros México: verniers, micrómetros, relojes comparadores, mesas de granito, torquímetros, sensores y servicios de calibración." />
+  <meta name="robots" content="index,follow" />
+  <title>Instrumentos de Medición | Shively Bros México</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --sb-green: #007f24;
+      --sb-green-dark: #005f1b;
+      --sb-black: #111827;
+      --sb-gray: #5f6b76;
+      --sb-soft: #f5f7f4;
+      --sb-white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--sb-black);
+      background: #ffffff;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .soft-bg {
+      background: var(--sb-soft);
+    }
+
+    .section-label {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 800;
+      color: var(--sb-green);
+      font-size: .85rem;
+    }
+
+    .section-label:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 3px;
+    }
+
+    .section-label.light {
+      color: #d7ffe0;
+    }
+
+    .section-title {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 12px 0 16px;
+      color: var(--sb-black);
+    }
+
+    .section-title span {
+      color: var(--sb-green);
+    }
+
+    .section-text {
+      color: var(--sb-gray);
+      line-height: 1.85;
+      font-size: 1.03rem;
+    }
+
+    .btn-sb {
+      background: var(--sb-green);
+      color: #fff;
+      border-radius: 999px;
+      padding: 13px 28px;
+      font-weight: 700;
+      border: none;
+      box-shadow: 0 12px 28px rgba(0, 127, 36, .22);
+      transition: .25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-sb:hover {
+      background: var(--sb-green-dark);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ===================== NAVBAR (igual al sitio principal) ===================== */
+    .sb-navbar {
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
+      padding: 12px 0;
+    }
+
+    .navbar-brand-logo {
+      height: 40px;
+    }
+
+    .sb-navbar .nav-link {
+      font-weight: 650;
+      color: #1f2937 !important;
+      margin: 0 6px;
+    }
+
+    .sb-navbar .nav-link:hover,
+    .sb-navbar .nav-link.active {
+      color: var(--sb-green) !important;
+    }
+
+    .sb-navbar .dropdown-menu {
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, .14);
+      padding: 10px;
+    }
+
+    .sb-navbar .dropdown-item {
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 550;
+    }
+
+    .sb-navbar .dropdown-item:hover {
+      background: rgba(0, 127, 36, .08);
+      color: var(--sb-green-dark);
+    }
+
+    .sb-navbar .dropdown-item.active {
+      background: var(--sb-green);
+      color: #fff;
+    }
+
+    /* ===================== BREADCRUMB ===================== */
+    .breadcrumb-strip {
+      background: #ffffff;
+      border-bottom: 1px solid #ececec;
+      padding: 14px 0;
+      font-size: .88rem;
+    }
+
+    .breadcrumb-strip a {
+      color: var(--sb-gray);
+      font-weight: 550;
+    }
+
+    .breadcrumb-strip a:hover {
+      color: var(--sb-green-dark);
+    }
+
+    .breadcrumb-strip i {
+      font-size: .65rem;
+      margin: 0 8px;
+      color: #b7bdc2;
+    }
+
+    .breadcrumb-strip span.current {
+      color: var(--sb-green-dark);
+      font-weight: 700;
+    }
+
+    /* ===================== PDF CARD (fiel al PDF de Metrología) ===================== */
+    .pdf-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 20px 55px rgba(20, 30, 25, .09);
+      padding: 56px 56px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .pdf-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .pdf-card-title h1 {
+      color: var(--sb-green);
+      font-weight: 800;
+      font-size: 2.9rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .pdf-card-title .subtitle {
+      color: var(--sb-black);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .pdf-card-image {
+      flex-shrink: 0;
+      max-width: 260px;
+    }
+
+    .pdf-card-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .pdf-card-body {
+      margin-top: 30px;
+      max-width: 900px;
+    }
+
+    .pdf-card-body p {
+      color: #333333;
+      font-size: 1.03rem;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .pdf-divider {
+      width: 320px;
+      max-width: 60%;
+      height: 6px;
+      background: var(--sb-green);
+      border-radius: 6px;
+      margin: 4px 0 28px;
+    }
+
+    .pdf-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pdf-list li {
+      position: relative;
+      padding-left: 22px;
+      font-style: italic;
+      color: #2a2a2a;
+      font-size: 1.01rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .pdf-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #2a2a2a;
+      font-style: normal;
+    }
+
+    .pdf-card-photo {
+      position: relative;
+      margin-top: 44px;
+      margin-left: -56px;
+      margin-right: -56px;
+      min-height: 220px;
+      overflow: hidden;
+    }
+
+    .pdf-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 220px;
+    }
+
+    @media (max-width: 767px) {
+      .pdf-card {
+        padding: 32px 20px 0;
+      }
+
+      .pdf-card-title h1 {
+        font-size: 2.1rem;
+      }
+
+      .pdf-card-image {
+        max-width: 170px;
+        margin: 0 auto;
+      }
+
+      .pdf-card-head {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .pdf-divider {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pdf-card-photo {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+    }
+
+    /* ===================== CTA BAND ===================== */
+    .cta-band {
+      background: var(--sb-green);
+      border-radius: 22px;
+      padding: 34px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    .cta-band h3 {
+      font-weight: 800;
+      margin: 0 0 4px;
+      font-size: 1.3rem;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .cta-band .btn-light-cta {
+      background: #ffffff;
+      color: var(--sb-green-dark);
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 13px 26px;
+      white-space: nowrap;
+    }
+
+    .cta-band .btn-light-cta:hover {
+      background: #eafff0;
+      color: var(--sb-green-dark);
+    }
+
+    /* ===================== CONTACT SECTION (igual al sitio principal) ===================== */
+    .contact-section {
+      background: #ffffff;
+    }
+
+    .contact-list.big>div {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    .contact-list i {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      color: #fff;
+    }
+
+    .contact-list i.whatsapp {
+      background: #25D366;
+    }
+
+    .contact-list i.email {
+      background: #0b5ea8;
+    }
+
+    .contact-list p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .contact-list a {
+      color: #344054;
+    }
+
+    .contact-form {
+      background: var(--sb-soft);
+      border-radius: 24px;
+      padding: 36px;
+      border: 1px solid #eceeed;
+    }
+
+    .contact-form .form-label {
+      font-weight: 650;
+      font-size: .88rem;
+    }
+
+    .contact-form .form-control {
+      border-radius: 12px;
+      border: 1px solid #d8dee5;
+      padding: 12px 14px;
+    }
+
+    .contact-form .form-control:focus {
+      border-color: var(--sb-green);
+      box-shadow: 0 0 0 .2rem rgba(0, 127, 36, .15);
+    }
+
+    /* ===================== FOOTER (igual al sitio principal) ===================== */
+    .footer {
+      background: #101617;
+      color: #d1d5db;
+      padding: 55px 0 20px;
+    }
+
+    .footer h3 {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .footer h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .footer a {
+      display: block;
+      color: rgba(255, 255, 255, .72);
+      margin-bottom: 9px;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      margin-top: 32px;
+      padding-top: 18px;
+      text-align: center;
+      color: rgba(255, 255, 255, .55);
+      font-size: .88rem;
+    }
+
+    /* ===================== WHATSAPP FLOAT + BACK TO TOP ===================== */
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, .25);
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5a;
+      color: #fff;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 90px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--sb-black);
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .25);
+    }
+
+    .back-to-top.show {
+      display: flex;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: all .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top sb-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html#inicio">
+        <img src="../assets/images/SHIVELYBROSLOGO_horiz.png" alt="Shively Bros México" class="navbar-brand-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="solucionesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Soluciones
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="solucionesDropdown">
+              <li><a class="dropdown-item" href="../index.html#productos">Todos</a></li>
+              <li><a class="dropdown-item active" href="instrumentos_de_medicion.html">Instrumentos de Medición</a>
+              </li>
+              <li><a class="dropdown-item" href="herramientas_de_corte.html">Herramientas de Corte</a></li>
+              <li><a class="dropdown-item" href="abrasivos.html">Abrasivos</a></li>
+              <li><a class="dropdown-item" href="mro.html">MRO</a></li>
+              <li><a class="dropdown-item" href="soluciones_para_filtracion.html">Soluciones para Filtración</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#ubicacion">Ubicación</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="breadcrumb-strip" style="margin-top:72px;">
+    <div class="container">
+      <a href="../index.html">Inicio</a>
+      <i class="bi bi-chevron-right"></i>
+      <a href="../index.html#productos">Soluciones</a>
+      <i class="bi bi-chevron-right"></i>
+      <span class="current">Instrumentos de Medición</span>
+    </div>
+  </div>
+
+  <!-- ===================== CONTENIDO FIEL AL PDF ===================== -->
+  <main class="section-padding">
+    <div class="container">
+
+      <section class="pdf-card reveal">
+        <div class="pdf-card-head">
+          <div class="pdf-card-title">
+            <h1>Metrología</h1>
+            <p class="subtitle">Control total para garantizar calidad.</p>
+          </div>
+          <div class="pdf-card-image">
+            <img src="../assets/images/medicion1.png" alt="Vernier y micrómetro digital Shively Bros">
+          </div>
+        </div>
+
+        <div class="pdf-card-body">
+          <p>La precisión es clave en la industria.</p>
+          <p>En Shively Bros ofrecemos instrumentos de medición confiables que aseguran el cumplimiento de
+            estándares y la calidad en cada proceso.</p>
+        </div>
+
+        <div class="pdf-divider"></div>
+
+        <div class="pdf-list">
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Servicios de calibración</li>
+                <li>Verniers, pie de rey, micrometros, indicadores.</li>
+                <li>Relojes comparadores, bases magnéticas.</li>
+                <li>Mesas de granito.</li>
+                <li>Torquímetros.</li>
+                <li>Medidores especiales y universales.</li>
+                <li>Gauges, fixtures de línea, fabricación especial.</li>
+                <li>Sensores</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Amperimetros, multimetros, detectores de voltaje.</li>
+                <li>Cámaras: termografica, acustica.</li>
+                <li>Analizador de vibraciones.</li>
+                <li>Medidores de: resistencia, de giro, de presión, de temp. y húmedad, de radiación.
+                  Estroboscopio.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-card-photo">
+          <img src="../assets/images/medicion2.png" alt="Instrumentos de medición y calibración Shively Bros">
+        </div>
+      </section>
+
+      <div class="cta-band reveal">
+        <div>
+          <h3>¿Necesitas cotizar instrumentos de medición?</h3>
+          <p>Cuéntanos qué producto buscas y te apoyamos con disponibilidad y precio.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20instrumentos%20de%20medici%C3%B3n."
+            target="_blank" class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+          <a href="#contacto" class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================== CONTACTO (mismo formulario del sitio principal) ===================== -->
+  <section id="contacto" class="section-padding soft-bg contact-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <span class="section-label">Contacto</span>
+          <h2 class="section-title">Cotiza tus <span>instrumentos de medición</span> con nosotros</h2>
+          <p class="section-text">Estamos listos para atenderte. Contáctanos por formulario, WhatsApp o correo
+            electrónico y nuestro equipo dará seguimiento a tu solicitud.</p>
+          <div class="contact-list big">
+            <div><i class="bi bi-whatsapp whatsapp"></i>
+              <p><strong>WhatsApp</strong><br><a href="https://wa.me/528443402926" target="_blank">8443402926</a></p>
+            </div>
+            <div><i class="bi bi-envelope-fill email"></i>
+              <p><strong>Correo electrónico</strong><br><a
+                  href="mailto:ventasmx@shivelybros.com">ventasmx@shivelybros.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal">
+          <div class="contact-form">
+            <form id="contactForm" class="row g-3">
+              <div class="col-md-6">
+                <label for="contactName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="contactName" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="contactCompany" class="form-label">Empresa</label>
+                <input type="text" class="form-control" id="contactCompany" name="company" required>
+              </div>
+              <div class="col-12">
+                <label for="contactEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="contactEmail" name="email" required>
+              </div>
+              <div class="col-12">
+                <label for="contactMessage" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="5"
+                  placeholder="Instrumento, marca o especificación que necesitas" required></textarea>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-sb btn-lg" style="width: 100%;">
+                  Enviar mensaje <i class="bi bi-send ms-2"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h3>Shively Bros México</h3>
+          <p>Comercialización y soluciones industriales para empresas manufactureras en México.</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Secciones</h4>
+          <a href="../index.html#nosotros">Nosotros</a>
+          <a href="../index.html#productos">Productos</a>
+          <a href="../index.html#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="col-md-4">
+          <h4>Contacto</h4>
+          <p style="color:rgba(255,255,255,.72); margin-bottom:9px;">Fresnos 184, Residencial Arboledas, México</p>
+          <a href="tel:8443402926">8443402926</a>
+          <a href="mailto:ventasmx@shivelybros.com">ventasmx@shivelybros.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Shively Bros México. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/528443402926" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Botón volver arriba
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Cerrar menú móvil al hacer clic en un enlace
+    document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .dropdown-item').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.querySelector('#menuPrincipal');
+        if (menu.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+
+    // Animaciones al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Formulario de contacto: arma el correo de ventas y redirige a la página de agradecimiento
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = document.getElementById('contactName').value.trim();
+        const empresa = document.getElementById('contactCompany').value.trim();
+        const correo = document.getElementById('contactEmail').value.trim();
+        const mensaje = document.getElementById('contactMessage').value.trim();
+
+        const subject = 'Solicitud de información';
+        const body = [
+          `Nombre: ${nombre}`,
+          `Empresa: ${empresa}`,
+          `Correo: ${correo}`,
+          `Mensaje: ${mensaje}`
+        ].join('\r\n');
+        const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+        setTimeout(() => {
+          window.location.href = '../gracias.html';
+        }, 250);
+      });
+    }
+  </script>
+</body>
+
+</html>
