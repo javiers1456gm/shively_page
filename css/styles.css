@@ -7,6 +7,16 @@
    --sb-white: #fff;
  }
 
+ ::selection {
+   background-color: var(--sb-green);
+   color: var(--sb-white);
+ }
+
+ ::-moz-selection {
+   background-color: var(--sb-green);
+   color: var(--sb-white);
+ }
+
  * {
    box-sizing: border-box
  }
@@ -52,7 +62,7 @@
  }
 
  .navbar-brand-logo {
-   height: 57px;
+   height: 75px;
    width: auto;
    max-width: 220px;
    object-fit: contain;
@@ -248,7 +258,7 @@
  }
 
  .section-label.light {
-   color: #d7ffe0
+   color: var(--sb-green)
  }
 
  .section-title {
