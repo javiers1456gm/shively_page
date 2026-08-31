@@ -60,463 +60,514 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logo-shively-fondo-blanco.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo-shively-fondo-blanco.png">
+
   <style>
-    :root {
-      --sb-green: #007f24;
-      --sb-green-dark: #005f1b;
-      --sb-black: #111827;
-      --sb-gray: #5f6b76;
-      --sb-soft: #f5f7f4;
-      --sb-white: #fff;
+    img {
+      max-width: 100%;
+      height: auto;
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--sb-black);
-      background: #ffffff;
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .section-padding {
-      padding: 90px 0;
-    }
-
-    .soft-bg {
-      background: var(--sb-soft);
-    }
-
-    .section-label {
-      display: inline-flex;
-      gap: 12px;
-      align-items: center;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 800;
-      color: var(--sb-green);
-      font-size: .85rem;
-    }
-
-    .section-label:after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: currentColor;
-      border-radius: 3px;
-    }
-
-    .section-label.light {
-      color: #d7ffe0;
-    }
-
-    .section-title {
-      font-weight: 800;
-      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-      line-height: 1.15;
-      margin: 12px 0 16px;
-      color: var(--sb-black);
-    }
-
-    .section-title span {
-      color: var(--sb-green);
-    }
-
-    .section-text {
-      color: var(--sb-gray);
-      line-height: 1.85;
-      font-size: 1.03rem;
-    }
-
-    .btn-sb {
-      background: var(--sb-green);
-      color: #fff;
-      border-radius: 999px;
-      padding: 13px 28px;
-      font-weight: 700;
-      border: none;
-      box-shadow: 0 12px 28px rgba(0, 127, 36, .22);
-      transition: .25s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-sb:hover {
-      background: var(--sb-green-dark);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    /* ===================== NAVBAR (igual al sitio principal) ===================== */
-    .sb-navbar {
-      background: rgba(255, 255, 255, .97);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
-      padding: 12px 0;
-    }
-
-    .navbar-brand-logo {
-      height: 75px;
-    }
-
-    .sb-navbar .nav-link {
-      font-weight: 650;
-      color: #1f2937 !important;
-      margin: 0 6px;
-    }
-
-    .sb-navbar .nav-link:hover,
-    .sb-navbar .nav-link.active {
-      color: var(--sb-green) !important;
-    }
-
-    .sb-navbar .dropdown-menu {
-      border: none;
-      border-radius: 14px;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, .14);
-      padding: 10px;
-    }
-
-    .sb-navbar .dropdown-item {
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-weight: 550;
-    }
-
-    .sb-navbar .dropdown-item:hover {
-      background: rgba(0, 127, 36, .08);
-      color: var(--sb-green-dark);
-    }
-
-    .sb-navbar .dropdown-item.active {
-      background: var(--sb-green);
-      color: #fff;
-    }
-
-    /* ===================== BREADCRUMB ===================== */
-    .breadcrumb-strip {
-      background: #ffffff;
-      border-bottom: 1px solid #ececec;
-      padding: 14px 0;
-      font-size: .88rem;
-    }
-
-    .breadcrumb-strip a {
-      color: var(--sb-gray);
-      font-weight: 550;
-    }
-
-    .breadcrumb-strip a:hover {
-      color: var(--sb-green-dark);
-    }
-
-    .breadcrumb-strip i {
-      font-size: .65rem;
-      margin: 0 8px;
-      color: #b7bdc2;
-    }
-
-    .breadcrumb-strip span.current {
-      color: var(--sb-green-dark);
-      font-weight: 700;
-    }
-
-    /* ===================== PDF CARD (fiel al PDF de Metrología) ===================== */
-    .pdf-card {
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 20px 55px rgba(20, 30, 25, .09);
-      padding: 56px 56px 0;
-      overflow: hidden;
+    /* ===================== HERO REDISEÑADO CON UX (B2B SPLIT & GLASSMORPHISM) ===================== */
+    .landing-hero-ux {
       position: relative;
+      background: linear-gradient(135deg, #071711 0%, #0d261b 50%, #123324 100%);
+      padding: 72px 0 80px;
+      color: #ffffff;
+      overflow: hidden;
     }
 
-    .pdf-card-head {
+    .landing-hero-ux::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .hero-ux-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(74, 222, 128, 0.12);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 20px;
+      letter-spacing: .04em;
+    }
+
+    .hero-ux-title {
+      font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+      font-weight: 800;
+      line-height: 1.12;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -.02em;
+    }
+
+    .hero-ux-title span {
+      color: #4ade80;
+    }
+
+    .hero-ux-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .hero-bullet {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .96rem;
+      color: rgba(255, 255, 255, .9);
     }
 
-    .pdf-card-title h1 {
-      color: var(--sb-green);
-      font-weight: 800;
-      font-size: 2.9rem;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .pdf-card-title .subtitle {
-      color: var(--sb-black);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-
-    .pdf-card-image {
+    .hero-bullet i {
+      font-size: 1.15rem;
+      margin-top: 3px;
       flex-shrink: 0;
-      max-width: 260px;
     }
 
-    .pdf-card-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .pdf-card-body {
-      margin-top: 30px;
-      max-width: 900px;
-    }
-
-    .pdf-card-body p {
-      color: #333333;
-      font-size: 1.03rem;
-      line-height: 1.85;
-      margin-bottom: 20px;
-    }
-
-    .pdf-divider {
-      width: 320px;
-      max-width: 60%;
-      height: 6px;
-      background: var(--sb-green);
-      border-radius: 6px;
-      margin: 4px 0 28px;
-    }
-
-    .pdf-list ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .pdf-list li {
+    /* Muestra visual interactiva (Glassmorphic Showcase Card) */
+    .hero-glass-container {
       position: relative;
-      padding-left: 22px;
-      font-style: italic;
-      color: #2a2a2a;
-      font-size: 1.01rem;
-      line-height: 1.7;
-      margin-bottom: 10px;
     }
 
-    .pdf-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #2a2a2a;
-      font-style: normal;
-    }
-
-    .pdf-card-photo {
+    .hero-glass-card {
       position: relative;
-      margin-top: 44px;
-      margin-left: -56px;
-      margin-right: -56px;
-      min-height: 220px;
+      border-radius: 28px;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
+      background: rgba(255, 255, 255, .05);
+      backdrop-filter: blur(16px);
+      height: 380px;
     }
 
-    .pdf-card-photo img {
+    .hero-glass-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      min-height: 220px;
+      filter: brightness(0.95) saturate(1.08);
+      transition: transform .6s ease;
     }
 
-    @media (max-width: 767px) {
-      .pdf-card {
-        padding: 32px 20px 0;
-      }
-
-      .pdf-card-title h1 {
-        font-size: 2.1rem;
-      }
-
-      .pdf-card-image {
-        max-width: 170px;
-        margin: 0 auto;
-      }
-
-      .pdf-card-head {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .pdf-divider {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .pdf-card-photo {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
+    .hero-glass-card:hover img {
+      transform: scale(1.04);
     }
 
-    /* ===================== CTA BAND ===================== */
-    .cta-band {
-      background: var(--sb-green);
-      border-radius: 22px;
-      padding: 34px 40px;
+    .floating-badge {
+      position: absolute;
+      background: rgba(10, 26, 18, 0.88);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 12px 18px;
+      color: #ffffff;
+      font-size: .84rem;
+      font-weight: 700;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .3);
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .floating-badge.badge-top {
+      top: 24px;
+      right: 24px;
+    }
+
+    .floating-badge.badge-bottom {
+      bottom: 24px;
+      left: 24px;
+    }
+
+    /* ===================== STRIP DE CONFIANZA RÁPIDA (TRUST STRIP) ===================== */
+    .trust-strip-ux {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .trust-strip-grid {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      color: #fff;
-      margin-top: 40px;
-    }
-
-    .cta-band h3 {
-      font-weight: 800;
-      margin: 0 0 4px;
-      font-size: 1.3rem;
-    }
-
-    .cta-band p {
-      margin: 0;
-      color: rgba(255, 255, 255, .85);
-    }
-
-    .cta-band .btn-light-cta {
-      background: #ffffff;
-      color: var(--sb-green-dark);
-      font-weight: 700;
-      border-radius: 999px;
-      padding: 13px 26px;
-      white-space: nowrap;
-    }
-
-    .cta-band .btn-light-cta:hover {
-      background: #eafff0;
-      color: var(--sb-green-dark);
-    }
-
-    /* ===================== CONTACT SECTION (igual al sitio principal) ===================== */
-    .contact-section {
-      background: #ffffff;
-    }
-
-    .contact-list.big>div {
-      display: flex;
       gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 22px;
+      flex-wrap: wrap;
     }
 
-    .contact-list i {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .trust-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .9rem;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .trust-strip-item i {
+      font-size: 1.35rem;
+      color: var(--sb-green);
+    }
+
+    /* ===================== PRODUCT GRID (¿QUÉ INCLUYE?) ===================== */
+    .include-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 991px) {
+      .include-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .include-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .include-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .include-card:hover {
+      border-color: var(--sb-green);
+      box-shadow: 0 14px 30px rgba(0, 127, 36, .14);
+      transform: translateY(-4px);
+    }
+
+    .include-icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(0, 127, 36, .12) 0%, rgba(0, 127, 36, .04) 100%);
+      color: var(--sb-green);
+      border: 1px solid rgba(0, 127, 36, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.65rem;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+      transition: all .3s ease;
+    }
+
+    .include-card:hover .include-icon-box {
+      background: var(--sb-green);
+      color: #ffffff;
+      border-color: var(--sb-green);
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 10px 22px rgba(0, 127, 36, .26);
+    }
+
+    .include-card-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--sb-black);
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    /* ===================== BENEFICIOS ===================== */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 575px) {
+      .benefits-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .benefit-card {
+      background: #f8faf9;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 22px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, .08);
+      border-color: rgba(0, 127, 36, .3);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #ffffff;
+      color: var(--sb-green);
+      border: 1px solid rgba(0, 127, 36, .2);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
       flex-shrink: 0;
-      color: #fff;
     }
 
-    .contact-list i.whatsapp {
-      background: #25D366;
+    .benefit-info h4 {
+      font-size: .95rem;
+      font-weight: 800;
+      color: var(--sb-black);
+      margin: 0 0 4px;
     }
 
-    .contact-list i.email {
-      background: #0b5ea8;
-    }
-
-    .contact-list p {
+    .benefit-info p {
+      font-size: .82rem;
+      color: var(--sb-gray);
       margin: 0;
-      color: #344054;
+      line-height: 1.45;
     }
 
-    .contact-list a {
-      color: #344054;
-    }
-
-    .contact-form {
-      background: var(--sb-soft);
+    /* ===================== CARROUSEL DE APLICACIONES (ALTA RESOLUCIÓN) ===================== */
+    .apps-carousel-card {
+      position: relative;
+      height: 380px;
       border-radius: 24px;
-      padding: 36px;
-      border: 1px solid #eceeed;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, .16);
+      background: #091310;
     }
 
-    .contact-form .form-label {
+    @media (max-width: 767px) {
+      .apps-carousel-card {
+        height: 290px;
+      }
+    }
+
+    .apps-carousel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .5s ease;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .apps-carousel-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .apps-carousel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 20%, rgba(7, 28, 20, 0.94) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      color: #ffffff;
+    }
+
+    .apps-carousel-overlay h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .apps-carousel-overlay p {
+      font-size: .88rem;
+      margin: 0;
+      color: rgba(255, 255, 255, .86);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 44px;
+      height: 44px;
+      background: var(--sb-green);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+      box-shadow: 0 8px 20px rgba(0, 127, 36, .3);
+    }
+
+    .carousel-control-prev {
+      left: -16px;
+    }
+
+    .carousel-control-next {
+      right: -16px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      background: var(--sb-green-dark);
+      opacity: 1;
+    }
+
+    /* ===================== MARQUEE INFINITO DE MARCAS ===================== */
+    .brand-marquee-container {
+      overflow: hidden;
+      background: #f8faf9;
+      border-radius: 20px;
+      padding: 24px 0;
+      border: 1px solid #e5e7eb;
+      position: relative;
+    }
+
+    .brand-marquee-container::before,
+    .brand-marquee-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .brand-marquee-container::before {
+      left: 0;
+      background: linear-gradient(90deg, #f8faf9, transparent);
+    }
+
+    .brand-marquee-container::after {
+      right: 0;
+      background: linear-gradient(-90deg, #f8faf9, transparent);
+    }
+
+    .brand-marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: brandMarquee 28s linear infinite;
+    }
+
+    .brand-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes brandMarquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .brand-badge-item {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #374151;
+      padding: 10px 22px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .brand-badge-item.mitutoyo {
+      color: #d97706;
+    }
+
+    .brand-badge-item.starrett {
+      color: #dc2626;
+    }
+
+    .brand-badge-item.fowler {
+      color: #1e3a8a;
+    }
+
+    .brand-badge-item.fluke {
+      color: #b45309;
+      background: #fef9c3;
+    }
+
+    .brand-badge-item.tesa {
+      color: #0284c7;
+    }
+
+    .brand-badge-item.sylvac {
+      color: #059669;
+    }
+
+    /* ===================== STICKY LANDING FORM (Mismo estilo que index.html) ===================== */
+    .landing-lead-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px 28px;
+      border: 1px solid #eceeed;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, .12);
+    }
+
+    .landing-lead-card .form-label {
       font-weight: 650;
       font-size: .88rem;
+      color: var(--sb-black);
+      margin-bottom: 6px;
     }
 
-    .contact-form .form-control {
+    .landing-lead-card .form-control {
       border-radius: 12px;
       border: 1px solid #d8dee5;
-      padding: 12px 14px;
+      padding: 11px 14px;
+      font-size: .9rem;
+      background: #ffffff;
     }
 
-    .contact-form .form-control:focus {
+    .landing-lead-card .form-control:focus {
       border-color: var(--sb-green);
-      box-shadow: 0 0 0 .2rem rgba(0, 127, 36, .15);
+      box-shadow: 0 0 0 .2rem rgba(0, 127, 36, .14);
     }
 
-    /* ===================== FOOTER (igual al sitio principal) ===================== */
-    .footer {
-      background: #101617;
-      color: #d1d5db;
-      padding: 55px 0 20px;
-    }
-
-    .footer h3 {
-      color: #ffffff;
-      font-weight: 800;
-    }
-
-    .footer h4 {
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .footer a {
-      display: block;
-      color: rgba(255, 255, 255, .72);
-      margin-bottom: 9px;
-    }
-
-    .footer a:hover {
-      color: #ffffff;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, .12);
-      margin-top: 32px;
-      padding-top: 18px;
-      text-align: center;
-      color: rgba(255, 255, 255, .55);
-      font-size: .88rem;
+    .trust-badge-lead {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #059669;
+      margin-top: 16px;
+      background: #ecfdf5;
+      padding: 9px 14px;
+      border-radius: 999px;
     }
 
     /* ===================== WHATSAPP FLOAT + BACK TO TOP ===================== */
     .whatsapp-float {
       position: fixed;
       right: 22px;
-      bottom: 92px;
+      bottom: 84px;
       width: 54px;
       height: 54px;
       border-radius: 50%;
@@ -524,7 +575,7 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #1ec85b 0%, #0cae4f 100%);
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       z-index: 998;
       box-shadow: 0 16px 34px rgba(12, 174, 79, .34);
@@ -533,8 +584,9 @@
     }
 
     .whatsapp-float:hover {
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 18px 38px rgba(12, 174, 79, .44);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 18px 36px rgba(12, 174, 79, .44);
+      color: #ffffff;
     }
 
     .whatsapp-float i {
@@ -563,27 +615,28 @@
       border-radius: 50%;
       border: 0;
       background: var(--sb-green);
-      color: #fff;
+      color: #ffffff;
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 999;
       box-shadow: 0 12px 26px rgba(0, 127, 36, .3);
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+
+    .back-to-top:hover {
+      background: var(--sb-green-dark);
+      transform: translateY(-2px);
     }
 
     .back-to-top.show {
       display: flex;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: all .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
+    .back-to-top i {
+      font-size: 1.2rem;
+      color: #ffffff;
     }
   </style>
 </head>
@@ -610,8 +663,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="solucionesDropdown">
               <li><a class="dropdown-item" href="../index.html#productos">Todos</a></li>
-              <li><a class="dropdown-item active" href="instrumentos_de_medicion.html">Instrumentos de Medición</a>
-              </li>
+              <li><a class="dropdown-item active" href="instrumentos_de_medicion.html">Instrumentos de Medición</a></li>
               <li><a class="dropdown-item" href="herramientas_de_corte.html">Herramientas de Corte</a></li>
               <li><a class="dropdown-item" href="abrasivos.html">Abrasivos</a></li>
               <li><a class="dropdown-item" href="mro.html">MRO</a></li>
@@ -620,7 +672,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="../index.html#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="../index.html#ubicacion">Ubicación</a></li>
-          <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="../index.html#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -637,126 +689,396 @@
     </div>
   </div>
 
-  <!-- ===================== CONTENIDO FIEL AL PDF ===================== -->
-  <main class="section-padding">
+  <!-- ===================== HERO REDISEÑADO CON UX (B2B SPLIT & SHOWCASE) ===================== -->
+  <header class="landing-hero-ux">
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 g-lg-5">
+
+        <!-- Columna Izquierda: Mensaje Clave & Bullets de Valor -->
+        <div class="col-lg-7 reveal">
+          <div class="hero-ux-badge">
+            <i class="fa-solid fa-microscope text-success me-2"></i> SOLUCIONES EN METROLOGÍA DE PRECISIÓN
+          </div>
+
+          <h1 class="hero-ux-title">
+            Equipos e Instrumentos de <span style="color: #007f24;">Medición Industrial</span>
+          </h1>
+
+          <div class="hero-ux-bullets">
+            <div class="hero-bullet">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span><strong>Tolerancias estrictas</strong> y precisión micrométrica en verniers, micrómetros y
+                torquímetros.</span>
+            </div>
+            <div class="hero-bullet">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span><strong>Calibración certificada</strong> respaldada por patrones de referencia internacional.</span>
+            </div>
+            <div class="hero-bullet">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span><strong>Suministro oportuno</strong> de marcas líderes globales para laboratorio e inspección en
+                planta.</span>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <a href="#contacto" class="btn btn-sb btn-lg">Solicitar cotización</a>
+            <a href="https://wa.me/528443402926" target="_blank" class="btn btn-light btn-lg rounded-pill">
+              <i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta Visual de Muestra (Glassmorphic Showcase) -->
+        <div class="col-lg-5 reveal">
+          <div class="hero-glass-container">
+
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-certificate text-warning me-2"></i> Norma ISO / Calibración
+            </div>
+
+            <div class="hero-glass-card">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80"
+                alt="Inspección de precisión en metrología industrial">
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-gauge-high text-success me-2"></i> 0.001 mm Tolerancia
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== STRIP DE CONFIANZA RÁPIDA (TRUST STRIP) ===================== -->
+  <div class="trust-strip-ux">
     <div class="container">
-
-      <section class="pdf-card reveal">
-        <div class="pdf-card-head">
-          <div class="pdf-card-title">
-            <h1>Metrología</h1>
-            <p class="subtitle">Control total para garantizar calidad.</p>
-          </div>
-          <div class="pdf-card-image">
-            <img src="../assets/images/medicion1.png" alt="Vernier y micrómetro digital Shively Bros">
-          </div>
+      <div class="trust-strip-grid">
+        <div class="trust-strip-item">
+          <i class="fa-solid fa-microscope"></i>
+          <span>Metrología Certificada</span>
         </div>
-
-        <div class="pdf-card-body">
-          <p>La precisión es clave en la industria.</p>
-          <p>En Shively Bros ofrecemos instrumentos de medición confiables que aseguran el cumplimiento de
-            estándares y la calidad en cada proceso.</p>
+        <div class="trust-strip-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>Cobertura Nacional</span>
         </div>
-
-        <div class="pdf-divider"></div>
-
-        <div class="pdf-list">
-          <div class="row">
-            <div class="col-md-6">
-              <ul>
-                <li>Servicios de calibración</li>
-                <li>Verniers, pie de rey, micrometros, indicadores.</li>
-                <li>Relojes comparadores, bases magnéticas.</li>
-                <li>Mesas de granito.</li>
-                <li>Torquímetros.</li>
-                <li>Medidores especiales y universales.</li>
-                <li>Gauges, fixtures de línea, fabricación especial.</li>
-                <li>Sensores</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Amperimetros, multimetros, detectores de voltaje.</li>
-                <li>Cámaras: termografica, acustica.</li>
-                <li>Analizador de vibraciones.</li>
-                <li>Medidores de: resistencia, de giro, de presión, de temp. y húmedad, de radiación.
-                  Estroboscopio.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="trust-strip-item">
+          <i class="fa-solid fa-award"></i>
+          <span>Marcas Líderes Globles</span>
         </div>
-
-        <div class="pdf-card-photo">
-          <img src="../assets/images/medicion2.png" alt="Instrumentos de medición y calibración Shively Bros">
-        </div>
-      </section>
-
-      <div class="cta-band reveal">
-        <div>
-          <h3>¿Necesitas cotizar instrumentos de medición?</h3>
-          <p>Cuéntanos qué producto buscas y te apoyamos con disponibilidad y precio.</p>
-        </div>
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20instrumentos%20de%20medici%C3%B3n."
-            target="_blank" class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
-          <a href="#contacto" class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a>
+        <div class="trust-strip-item">
+          <i class="fa-solid fa-user-gear"></i>
+          <span>Asesoría Técnica Directa</span>
         </div>
       </div>
+    </div>
+  </div>
 
+  <!-- ===================== CONTENIDO PRINCIPAL Y FORMULARIO STICKY ===================== -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+
+        <!-- COLUMNA IZQUIERDA: CONTENIDO Y PROPUESTA DE VALOR (8 cols) -->
+        <div class="col-lg-8">
+
+          <!-- 1. ¿QUÉ INCLUYE NUESTRA METROLOGÍA? -->
+          <section class="reveal mb-5">
+            <span class="section-label">Soluciones Integrales</span>
+            <h2 class="section-title">¿Qué incluye nuestra <span>metrología</span>?</h2>
+            <div class="include-grid">
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-file-circle-check"></i></div>
+                <h3 class="include-card-title">Servicios de calibración</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-ruler-combined"></i></div>
+                <h3 class="include-card-title">Verniers, pie de rey, micrómetros, indicadores</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+                <h3 class="include-card-title">Relojes comparadores, bases magnéticas</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-border-all"></i></div>
+                <h3 class="include-card-title">Mesas de granito</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3 class="include-card-title">Torquímetros</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-microscope"></i></div>
+                <h3 class="include-card-title">Medidores especiales y universales</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-gears"></i></div>
+                <h3 class="include-card-title">Gauges, fixture de línea, fabricación especial</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <h3 class="include-card-title">Amperímetros, multímetros, detectores de voltaje</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-camera"></i></div>
+                <h3 class="include-card-title">Cámaras: termográfica, acústica</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                <h3 class="include-card-title">Analizador de vibraciones</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-temperature-three-quarters"></i></div>
+                <h3 class="include-card-title">Medidores de: resistencia, giro, presión, temp. y humedad, radiación</h3>
+              </div>
+
+              <div class="include-card">
+                <div class="include-icon-box"><i class="fa-solid fa-tower-broadcast"></i></div>
+                <h3 class="include-card-title">Sensores</h3>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 2. BENEFICIOS PARA TU OPERACIÓN -->
+          <section class="reveal mb-5">
+            <span class="section-label">Ventajas Competitivas</span>
+            <h2 class="section-title">Beneficios para tu <span>operación</span></h2>
+            <div class="benefits-grid">
+
+              <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+                <div class="benefit-info">
+                  <h4>Precisión garantizada</h4>
+                  <p>Instrumentos confiables para resultados exactos en cada pieza.</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-award"></i></div>
+                <div class="benefit-info">
+                  <h4>Calidad comprobada</h4>
+                  <p>Productos de marcas líderes en la industria internacional.</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-person-check"></i></div>
+                <div class="benefit-info">
+                  <h4>Asesoría especializada</h4>
+                  <p>Te ayudamos a seleccionar la mejor solución técnica.</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-truck"></i></div>
+                <div class="benefit-info">
+                  <h4>Soporte y servicio</h4>
+                  <p>Respaldo técnico continuo y entrega oportuna nacional.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 3. CARROUSEL INTERACTIVO DE APLICACIONES INDUSTRIALES (ALTA RESOLUCIÓN) -->
+          <section class="reveal mb-5">
+            <span class="section-label">Sectores y Procesos</span>
+            <h2 class="section-title">Aplicaciones <span>industriales</span></h2>
+
+            <div id="appsCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active" data-bs-interval="4500">
+                  <div class="apps-carousel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80"
+                      alt="Manufactura de precisión real">
+                    <div class="apps-carousel-overlay">
+                      <h3>Manufactura de Precisión</h3>
+                      <p>Tolerancias estrictas e inspección dimensional para piezas mecanizadas de alta exigencia.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4500">
+                  <div class="apps-carousel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1400&q=80"
+                      alt="Control de calidad y laboratorio de metrología real">
+                    <div class="apps-carousel-overlay">
+                      <h3>Control de Calidad y Laboratorio</h3>
+                      <p>Verificación continua y laboratorios con patrones certificados de metrología.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4500">
+                  <div class="apps-carousel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80"
+                      alt="Mantenimiento Industrial real">
+                    <div class="apps-carousel-overlay">
+                      <h3>Mantenimiento Industrial</h3>
+                      <p>Monitoreo de vibraciones, alineación y mantenimiento preventivo en planta.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4500">
+                  <div class="apps-carousel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1400&q=80"
+                      alt="Industria Automotriz y Aeroespacial real">
+                    <div class="apps-carousel-overlay">
+                      <h3>Industria Automotriz y Aeroespacial</h3>
+                      <p>Instrumentación especializada para ensamble, fixtures de línea y auditorías de calidad.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4500">
+                  <div class="apps-carousel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1400&q=80"
+                      alt="Medición y Verificación en Procesos real">
+                    <div class="apps-carousel-overlay">
+                      <h3>Medición y Verificación en Procesos</h3>
+                      <p>Monitoreo térmico, eléctrico y de humedad en líneas continuas de producción.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#appsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#appsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- 4. CARROUSEL INFINITO DE MARCAS (TOP 15 DE METROLOGÍA) -->
+          <section class="reveal mb-4">
+            <span class="section-label">Respaldo Internacional</span>
+            <h2 class="section-title">Marcas que <span>comercializamos</span></h2>
+
+            <div class="brand-marquee-container">
+              <div class="brand-marquee-track">
+                <div class="brand-badge-item mitutoyo">Mitutoyo</div>
+                <div class="brand-badge-item starrett">Starrett</div>
+                <div class="brand-badge-item fowler">Fowler</div>
+                <div class="brand-badge-item fluke">FLUKE</div>
+                <div class="brand-badge-item tesa">TESA</div>
+                <div class="brand-badge-item sylvac">SYLVAC</div>
+                <div class="brand-badge-item mahr">Mahr</div>
+                <div class="brand-badge-item zeiss">ZEISS</div>
+                <div class="brand-badge-item hexagon">Hexagon</div>
+                <div class="brand-badge-item renishaw">Renishaw</div>
+                <div class="brand-badge-item shimadzu">Shimadzu</div>
+                <div class="brand-badge-item keyence">KEYENCE</div>
+                <div class="brand-badge-item">ACCUD</div>
+                <div class="brand-badge-item">ASIMETO</div>
+                <div class="brand-badge-item">STLAS</div>
+                <!-- Duplicado para ciclo infinito continuo -->
+                <div class="brand-badge-item mitutoyo">Mitutoyo</div>
+                <div class="brand-badge-item starrett">Starrett</div>
+                <div class="brand-badge-item fowler">Fowler</div>
+                <div class="brand-badge-item fluke">FLUKE</div>
+                <div class="brand-badge-item tesa">TESA</div>
+                <div class="brand-badge-item sylvac">SYLVAC</div>
+                <div class="brand-badge-item mahr">Mahr</div>
+                <div class="brand-badge-item zeiss">ZEISS</div>
+                <div class="brand-badge-item hexagon">Hexagon</div>
+                <div class="brand-badge-item renishaw">Renishaw</div>
+                <div class="brand-badge-item shimadzu">Shimadzu</div>
+                <div class="brand-badge-item keyence">KEYENCE</div>
+                <div class="brand-badge-item">ACCUD</div>
+                <div class="brand-badge-item">ASIMETO</div>
+                <div class="brand-badge-item">STLAS</div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: FORMULARIO STICKY CON MAILTO A VENTAS (Mismo formato que index.html) -->
+        <div class="col-lg-4">
+          <div style="position: sticky; top: 92px; z-index: 10;">
+            <div id="contacto" class="landing-lead-card reveal">
+
+              <span class="section-label mb-2">Contacto Directo</span>
+              <h3 class="section-title fs-4 mb-2">Cotiza tus <span>instrumentos</span> con nosotros</h3>
+              <p class="section-text text-muted mb-4" style="font-size: .86rem;">
+                Llena el formulario y nuestro equipo dará seguimiento inmediato a tu solicitud.
+              </p>
+
+              <form id="leadLandingForm" class="row g-3">
+
+                <div class="col-12">
+                  <label for="leadName" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="leadName" name="name" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadCompany" class="form-label">Empresa</label>
+                  <input type="text" class="form-control" id="leadCompany" name="company" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="leadEmail" name="email" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadPhone" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="leadPhone" name="phone">
+                </div>
+
+                <div class="col-12">
+                  <label for="leadMessage" class="form-label">¿Qué instrumento necesitas?</label>
+                  <textarea class="form-control" id="leadMessage" name="message" rows="3" required></textarea>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-sb btn-lg w-100">
+                    Enviar mensaje <i class="bi bi-send ms-2"></i>
+                  </button>
+                </div>
+
+                <div class="col-12">
+                  <div class="trust-badge-lead">
+                    <i class="bi bi-shield-check"></i> Respuesta rápida y atención personalizada.
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </main>
-
-  <!-- ===================== CONTACTO (mismo formulario del sitio principal) ===================== -->
-  <section id="contacto" class="section-padding soft-bg contact-section">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-5 reveal">
-          <span class="section-label">Contacto</span>
-          <h2 class="section-title">Cotiza tus <span>instrumentos de medición</span> con nosotros</h2>
-          <p class="section-text">Estamos listos para atenderte. Contáctanos por formulario, WhatsApp o correo
-            electrónico y nuestro equipo dará seguimiento a tu solicitud.</p>
-          <div class="contact-list big">
-            <div><i class="bi bi-whatsapp whatsapp"></i>
-              <p><strong>WhatsApp</strong><br><a href="https://wa.me/528443402926" target="_blank">8443402926</a></p>
-            </div>
-            <div><i class="bi bi-envelope-fill email"></i>
-              <p><strong>Correo electrónico</strong><br><a
-                  href="mailto:ventasmx@shivelybros.com">ventasmx@shivelybros.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 reveal">
-          <div class="contact-form">
-            <form id="contactForm" class="row g-3">
-              <div class="col-md-6">
-                <label for="contactName" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="contactName" name="name" required>
-              </div>
-              <div class="col-md-6">
-                <label for="contactCompany" class="form-label">Empresa</label>
-                <input type="text" class="form-control" id="contactCompany" name="company" required>
-              </div>
-              <div class="col-12">
-                <label for="contactEmail" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="contactEmail" name="email" required>
-              </div>
-              <div class="col-12">
-                <label for="contactMessage" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="contactMessage" name="message" rows="5"
-                  placeholder="Instrumento, marca o especificación que necesitas" required></textarea>
-              </div>
-              <div class="col-12 d-flex justify-content-end">
-                <button type="submit" class="btn btn-sb btn-lg" style="width: 100%;">
-                  Enviar mensaje <i class="bi bi-send ms-2"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
@@ -784,64 +1106,64 @@
     </div>
   </footer>
 
+  <!-- Floating WhatsApp Bubble -->
   <a href="https://wa.me/528443402926" target="_blank" rel="noopener" class="whatsapp-float"
     aria-label="Contactar por WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
-  <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Back To Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Botón volver arriba
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('show', window.scrollY > 500);
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Cerrar menú móvil al hacer clic en un enlace
-    document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .dropdown-item').forEach(link => {
-      link.addEventListener('click', () => {
-        const menu = document.querySelector('#menuPrincipal');
-        if (menu.classList.contains('show')) {
-          bootstrap.Collapse.getOrCreateInstance(menu).hide();
-        }
-      });
-    });
-
-    // Animaciones al hacer scroll
+    // Intersection Observer para revelar elementos suavemente
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
-    }, { threshold: .12 });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Formulario de contacto: arma el correo de ventas y redirige a la página de agradecimiento
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const nombre = document.getElementById('contactName').value.trim();
-        const empresa = document.getElementById('contactCompany').value.trim();
-        const correo = document.getElementById('contactEmail').value.trim();
-        const mensaje = document.getElementById('contactMessage').value.trim();
+    // Botón volver arriba
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 400);
+      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
 
-        const subject = 'Solicitud de información';
+    // Envío por Mailto a ventasmx@shivelybros.com (Abre el cliente de correo listo para enviar)
+    const leadForm = document.getElementById('leadLandingForm');
+    if (leadForm) {
+      leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('leadName').value.trim();
+        const company = document.getElementById('leadCompany').value.trim();
+        const email = document.getElementById('leadEmail').value.trim();
+        const phone = document.getElementById('leadPhone').value.trim();
+        const message = document.getElementById('leadMessage').value.trim();
+
+        const subject = 'Solicitud de cotización - Metrología e Instrumentos de Medición';
         const body = [
-          `Nombre: ${nombre}`,
-          `Empresa: ${empresa}`,
-          `Correo: ${correo}`,
-          `Mensaje: ${mensaje}`
+          `Nombre: ${name}`,
+          `Empresa: ${company}`,
+          `Correo: ${email}`,
+          `Teléfono: ${phone || 'N/A'}`,
+          `Mensaje / Requerimiento: ${message}`
         ].join('\r\n');
+
         const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailto;
-        setTimeout(() => {
-          window.location.href = '../gracias.html';
-        }, 250);
       });
     }
   </script>
+
 </body>
 
 </html>
