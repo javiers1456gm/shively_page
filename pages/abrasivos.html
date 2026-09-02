@@ -8,16 +8,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-P74KRQZ9SY');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abrasivos Industriales | Shively Bros México — Discos, Bandas de Lija y Ruedas Abrasivas</title>
+  <title>Abrasivos Industriales | Shively Bros México — Discos, Bandas y Ruedas Abrasivas</title>
   <meta name="description"
-    content="Abrasivos industriales Shively Bros México: discos de corte y desbaste, bandas de lija, ruedas abrasivas, cepillos y limas de alto desempeño para manufactura, metalmecánica y acabado superficial." />
+    content="Abrasivos industriales Shively Bros México: discos de corte y desbaste, bandas de lija, ruedas abrasivas, fibra y flap discs de alto desempeño para manufactura y metalmecánica." />
   <meta name="keywords"
-    content="abrasivos industriales México, discos de corte, bandas de lija, ruedas abrasivas, industrial abrasives, abrasives supplier México, Shively Bros abrasivos" />
+    content="abrasivos industriales México, discos de corte, bandas de lija, ruedas abrasivas, industrial abrasives, abrasives supplier México, Shively Bros abrasivos, flap discs, fibra abrasiva" />
   <meta name="author" content="Shively Bros México" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.shivelybros.mx/pages/abrasivos.html" />
@@ -25,7 +24,7 @@
   <meta property="og:site_name" content="Shively Bros México" />
   <meta property="og:title" content="Abrasivos Industriales | Shively Bros México" />
   <meta property="og:description"
-    content="Discos de corte, bandas de lija, ruedas abrasivas y cepillos de alto desempeño para manufactura y metalmecánica en México." />
+    content="Discos de corte, bandas de lija, ruedas abrasivas y flap discs de alto desempeño para manufactura en México." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.shivelybros.mx/pages/abrasivos.html" />
   <meta property="og:locale" content="es_MX" />
@@ -43,7 +42,7 @@
     "@type": "WebPage",
     "name": "Abrasivos Industriales — Shively Bros México",
     "url": "https://www.shivelybros.mx/pages/abrasivos.html",
-    "description": "Abrasivos industriales de alto desempeño: discos de corte, bandas de lija, ruedas abrasivas y cepillos para manufactura y metalmecánica.",
+    "description": "Abrasivos industriales de alto desempeño: discos de corte, bandas de lija, ruedas abrasivas y flap discs para manufactura y metalmecánica.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -60,462 +59,415 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logo-shively-fondo-blanco.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo-shively-fondo-blanco.png">
+
   <style>
-    :root {
-      --sb-green: #007f24;
-      --sb-green-dark: #005f1b;
-      --sb-black: #111827;
-      --sb-gray: #5f6b76;
-      --sb-soft: #f5f7f4;
-      --sb-white: #fff;
+    img {
+      max-width: 100%;
+      height: auto;
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--sb-black);
-      background: #ffffff;
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .section-padding {
-      padding: 90px 0;
-    }
-
-    .soft-bg {
-      background: var(--sb-soft);
-    }
-
-    .section-label {
-      display: inline-flex;
-      gap: 12px;
-      align-items: center;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 800;
-      color: var(--sb-green);
-      font-size: .85rem;
-    }
-
-    .section-label:after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: currentColor;
-      border-radius: 3px;
-    }
-
-    .section-label.light {
-      color: #d7ffe0;
-    }
-
-    .section-title {
-      font-weight: 800;
-      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-      line-height: 1.15;
-      margin: 12px 0 16px;
-      color: var(--sb-black);
-    }
-
-    .section-title span {
-      color: var(--sb-green);
-    }
-
-    .section-text {
-      color: var(--sb-gray);
-      line-height: 1.85;
-      font-size: 1.03rem;
-    }
-
-    .btn-sb {
-      background: var(--sb-green);
-      color: #fff;
-      border-radius: 999px;
-      padding: 13px 28px;
-      font-weight: 700;
-      border: none;
-      box-shadow: 0 12px 28px rgba(0, 127, 36, .22);
-      transition: .25s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-sb:hover {
-      background: var(--sb-green-dark);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    /* ===================== NAVBAR (igual al sitio principal) ===================== */
-    .sb-navbar {
-      background: rgba(255, 255, 255, .97);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
-      padding: 12px 0;
-    }
-
-    .navbar-brand-logo {
-      height: 75px;
-    }
-
-    .sb-navbar .nav-link {
-      font-weight: 650;
-      color: #1f2937 !important;
-      margin: 0 6px;
-    }
-
-    .sb-navbar .nav-link:hover,
-    .sb-navbar .nav-link.active {
-      color: var(--sb-green) !important;
-    }
-
-    .sb-navbar .dropdown-menu {
-      border: none;
-      border-radius: 14px;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, .14);
-      padding: 10px;
-    }
-
-    .sb-navbar .dropdown-item {
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-weight: 550;
-    }
-
-    .sb-navbar .dropdown-item:hover {
-      background: rgba(0, 127, 36, .08);
-      color: var(--sb-green-dark);
-    }
-
-    .sb-navbar .dropdown-item.active {
-      background: var(--sb-green);
-      color: #fff;
-    }
-
-    /* ===================== BREADCRUMB ===================== */
-    .breadcrumb-strip {
-      background: #ffffff;
-      border-bottom: 1px solid #ececec;
-      padding: 14px 0;
-      font-size: .88rem;
-    }
-
-    .breadcrumb-strip a {
-      color: var(--sb-gray);
-      font-weight: 550;
-    }
-
-    .breadcrumb-strip a:hover {
-      color: var(--sb-green-dark);
-    }
-
-    .breadcrumb-strip i {
-      font-size: .65rem;
-      margin: 0 8px;
-      color: #b7bdc2;
-    }
-
-    .breadcrumb-strip span.current {
-      color: var(--sb-green-dark);
-      font-weight: 700;
-    }
-
-    /* ===================== PDF CARD (fiel al PDF de Abrasivos) ===================== */
-    .pdf-card {
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 20px 55px rgba(20, 30, 25, .09);
-      padding: 56px 56px 0;
-      overflow: hidden;
+    /* ===================== HERO ABRASIVOS — INDUSTRIAL GRINDING ===================== */
+    .hero-abrasivos {
       position: relative;
+      background: linear-gradient(135deg, #091310 0%, #0d1f18 50%, #0e2a1e 100%);
+      padding: 72px 0 80px;
+      color: #ffffff;
+      overflow: hidden;
     }
 
-    .pdf-card-head {
+    /* Dot grid overlay — verde muy sutil */
+    .hero-abrasivos::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0, 127, 36, 0.13) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    /* Acento naranja mínimo — solo línea superior */
+    .hero-abrasivos::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 10%, rgba(249, 115, 22, 0.45) 50%, transparent 90%);
+    }
+
+    .hero-badge-abrasivos {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(0, 127, 36, 0.16);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 20px;
+      letter-spacing: .04em;
+    }
+
+    .hero-title-abrasivos {
+      font-size: clamp(2rem, 3.6vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -.02em;
+    }
+
+    .hero-title-abrasivos span {
+      color: var(--sb-green);
+    }
+
+    .hero-bullets-abrasivos {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .hero-bullet-abs {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .96rem;
+      color: rgba(255, 255, 255, .9);
     }
 
-    .pdf-card-title h1 {
+    .hero-bullet-abs i {
       color: var(--sb-green);
-      font-weight: 800;
-      font-size: 2.9rem;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .pdf-card-title .subtitle {
-      color: var(--sb-black);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-
-    .pdf-card-image {
+      font-size: 1.15rem;
+      margin-top: 3px;
       flex-shrink: 0;
-      max-width: 280px;
     }
 
-    .pdf-card-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .pdf-card-body {
-      margin-top: 30px;
-      max-width: 900px;
-    }
-
-    .pdf-card-body p {
-      color: #333333;
-      font-size: 1.03rem;
-      line-height: 1.85;
-      margin-bottom: 20px;
-    }
-
-    .pdf-divider {
-      width: 320px;
-      max-width: 60%;
-      height: 6px;
-      background: var(--sb-green);
-      border-radius: 6px;
-      margin: 4px 0 28px;
-    }
-
-    .pdf-list ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .pdf-list li {
+    /* Hero image card */
+    .abs-hero-img-wrap {
       position: relative;
-      padding-left: 22px;
-      font-style: italic;
-      color: #2a2a2a;
-      font-size: 1.01rem;
-      line-height: 2.25;
-    }
-
-    .pdf-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #2a2a2a;
-      font-style: normal;
-    }
-
-    .pdf-card-photo {
-      position: relative;
-      margin-top: 44px;
-      margin-left: -56px;
-      margin-right: -56px;
-      min-height: 220px;
+      border-radius: 28px;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .5);
+      background: rgba(255, 255, 255, .04);
+      backdrop-filter: blur(16px);
+      height: 380px;
     }
 
-    .pdf-card-photo img {
+    .abs-hero-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      min-height: 220px;
+      transition: transform .6s ease;
     }
 
-    @media (max-width: 767px) {
-      .pdf-card {
-        padding: 32px 20px 0;
-      }
-
-      .pdf-card-title h1 {
-        font-size: 2.1rem;
-      }
-
-      .pdf-card-image {
-        max-width: 170px;
-        margin: 0 auto;
-      }
-
-      .pdf-card-head {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .pdf-divider {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .pdf-card-photo {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
+    .abs-hero-img-wrap:hover img {
+      transform: scale(1.04);
     }
 
-    /* ===================== CTA BAND ===================== */
-    .cta-band {
-      background: var(--sb-green);
-      border-radius: 22px;
-      padding: 34px 40px;
+    .abs-floating-badge {
+      position: absolute;
+      background: rgba(9, 19, 16, 0.92);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 12px 18px;
+      color: #ffffff;
+      font-size: .84rem;
+      font-weight: 700;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .35);
+      z-index: 5;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      color: #fff;
-      margin-top: 40px;
+      gap: 10px;
     }
 
-    .cta-band h3 {
-      font-weight: 800;
-      margin: 0 0 4px;
-      font-size: 1.3rem;
+    .abs-floating-badge.badge-top {
+      top: 22px;
+      right: 22px;
     }
 
-    .cta-band p {
-      margin: 0;
-      color: rgba(255, 255, 255, .85);
+    .abs-floating-badge.badge-bottom {
+      bottom: 22px;
+      left: 22px;
     }
 
-    .cta-band .btn-light-cta {
+    /* ===================== TRUST STRIP DE 4 PUNTOS ===================== */
+    .trust-strip-abs {
       background: #ffffff;
-      color: var(--sb-green-dark);
-      font-weight: 700;
-      border-radius: 999px;
-      padding: 13px 26px;
-      white-space: nowrap;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
     }
 
-    .cta-band .btn-light-cta:hover {
-      background: #eafff0;
-      color: var(--sb-green-dark);
+    .trust-strip-abs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
-    /* ===================== CONTACT SECTION (igual al sitio principal) ===================== */
-    .contact-section {
-      background: #ffffff;
+    @media (max-width: 991px) {
+      .trust-strip-abs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    .contact-list.big>div {
+    @media (max-width: 575px) {
+      .trust-strip-abs-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .trust-strip-abs-item {
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 22px;
+      align-items: center;
+      gap: 12px;
+      font-size: .88rem;
+      font-weight: 700;
+      color: #1f2937;
+      background: #f8faf9;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
     }
 
-    .contact-list i {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .trust-strip-abs-item i {
+      font-size: 1.3rem;
+      color: var(--sb-green);
+      flex-shrink: 0;
+    }
+
+    /* ===================== GRID ABRASIVOS (3 columnas) ===================== */
+    .abs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 991px) {
+      .abs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .abs-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .abs-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .abs-card:hover {
+      border-color: var(--sb-green);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 127, 36, .12);
+    }
+
+    .abs-card-img {
+      height: 165px;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .abs-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      transition: transform .5s ease;
+    }
+
+    .abs-card:hover .abs-card-img img {
+      transform: scale(1.02);
+    }
+
+    .abs-card-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(9, 26, 18, 0.86);
+      backdrop-filter: blur(8px);
+      color: #4ade80;
+      border: 1px solid rgba(255, 255, 255, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      color: #fff;
+      font-size: 1.1rem;
     }
 
-    .contact-list i.whatsapp {
-      background: #25D366;
+    .abs-card-body {
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
-    .contact-list i.email {
-      background: #0b5ea8;
-    }
-
-    .contact-list p {
-      margin: 0;
-      color: #344054;
-    }
-
-    .contact-list a {
-      color: #344054;
-    }
-
-    .contact-form {
-      background: var(--sb-soft);
-      border-radius: 24px;
-      padding: 36px;
-      border: 1px solid #eceeed;
-    }
-
-    .contact-form .form-label {
-      font-weight: 650;
-      font-size: .88rem;
-    }
-
-    .contact-form .form-control {
-      border-radius: 12px;
-      border: 1px solid #d8dee5;
-      padding: 12px 14px;
-    }
-
-    .contact-form .form-control:focus {
-      border-color: var(--sb-green);
-      box-shadow: 0 0 0 .2rem rgba(0, 127, 36, .15);
-    }
-
-    /* ===================== FOOTER (igual al sitio principal) ===================== */
-    .footer {
-      background: #101617;
-      color: #d1d5db;
-      padding: 55px 0 20px;
-    }
-
-    .footer h3 {
-      color: #ffffff;
-      font-weight: 800;
-    }
-
-    .footer h4 {
-      color: #ffffff;
+    .abs-card-title {
       font-size: 1rem;
       font-weight: 800;
-      margin-bottom: 16px;
+      color: #111827;
+      margin-bottom: 6px;
     }
 
-    .footer a {
-      display: block;
-      color: rgba(255, 255, 255, .72);
-      margin-bottom: 9px;
+    .abs-card-desc {
+      font-size: .83rem;
+      color: #5f6b76;
+      line-height: 1.5;
+      margin: 0;
     }
 
-    .footer a:hover {
-      color: #ffffff;
+    /* ===================== MARQUEE DE MARCAS (mismo estilo) ===================== */
+    .brand-marquee-container {
+      overflow: hidden;
+      background: #f8faf9;
+      border-radius: 20px;
+      padding: 24px 0;
+      border: 1px solid #e5e7eb;
+      position: relative;
     }
 
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, .12);
-      margin-top: 32px;
-      padding-top: 18px;
-      text-align: center;
-      color: rgba(255, 255, 255, .55);
+    .brand-marquee-container::before,
+    .brand-marquee-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .brand-marquee-container::before {
+      left: 0;
+      background: linear-gradient(90deg, #f8faf9, transparent);
+    }
+
+    .brand-marquee-container::after {
+      right: 0;
+      background: linear-gradient(-90deg, #f8faf9, transparent);
+    }
+
+    .brand-marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: brandMarqueeAbs 30s linear infinite;
+    }
+
+    .brand-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes brandMarqueeAbs {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .brand-badge-item {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #374151;
+      padding: 10px 22px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .brand-badge-item.norton {
+      color: var(--sb-green);
+    }
+
+    .brand-badge-item.saint {
+      color: #005f1b;
+    }
+
+    .brand-badge-item.cubitron {
+      color: #0284c7;
+    }
+
+    .brand-badge-item.sia {
+      color: #374151;
+    }
+
+    .brand-badge-item.klingspor {
+      color: #15803d;
+    }
+
+    /* ===================== STICKY LANDING FORM ===================== */
+    .landing-lead-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px 28px;
+      border: 1px solid #eceeed;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, .12);
+    }
+
+    .landing-lead-card .form-label {
+      font-weight: 650;
       font-size: .88rem;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .landing-lead-card .form-control {
+      border-radius: 12px;
+      border: 1px solid #d8dee5;
+      padding: 11px 14px;
+      font-size: .9rem;
+      background: #ffffff;
+    }
+
+    .landing-lead-card .form-control:focus {
+      border-color: #007f24;
+      box-shadow: 0 0 0 .2rem rgba(0, 127, 36, .14);
+    }
+
+    .trust-badge-lead {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #059669;
+      margin-top: 16px;
+      background: #ecfdf5;
+      border-radius: 999px;
+      padding: 9px 14px;
     }
 
     /* ===================== WHATSAPP FLOAT + BACK TO TOP ===================== */
     .whatsapp-float {
       position: fixed;
       right: 22px;
-      bottom: 92px;
+      bottom: 84px;
       width: 54px;
       height: 54px;
       border-radius: 50%;
@@ -523,17 +475,18 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #1ec85b 0%, #0cae4f 100%);
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       z-index: 998;
       box-shadow: 0 16px 34px rgba(12, 174, 79, .34);
-      animation: whatsapp-float 2.6s ease-in-out infinite;
+      animation: waFloat 2.6s ease-in-out infinite;
       transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .whatsapp-float:hover {
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 18px 38px rgba(12, 174, 79, .44);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 18px 36px rgba(12, 174, 79, .44);
+      color: #ffffff;
     }
 
     .whatsapp-float i {
@@ -541,11 +494,11 @@
       line-height: 1;
     }
 
-    @keyframes whatsapp-float {
+    @keyframes waFloat {
 
       0%,
       100% {
-        transform: translateY(0px);
+        transform: translateY(0);
       }
 
       50% {
@@ -561,28 +514,29 @@
       height: 48px;
       border-radius: 50%;
       border: 0;
-      background: var(--sb-green);
-      color: #fff;
+      background: #007f24;
+      color: #ffffff;
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 999;
       box-shadow: 0 12px 26px rgba(0, 127, 36, .3);
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+
+    .back-to-top:hover {
+      background: #005f1b;
+      transform: translateY(-2px);
     }
 
     .back-to-top.show {
       display: flex;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: all .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
+    .back-to-top i {
+      font-size: 1.2rem;
+      color: #ffffff;
     }
   </style>
 </head>
@@ -618,7 +572,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="../index.html#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="../index.html#ubicacion">Ubicación</a></li>
-          <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="../index.html#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-sb btn-sm" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -635,128 +589,361 @@
     </div>
   </div>
 
-  <!-- ===================== CONTENIDO FIEL AL PDF ===================== -->
-  <main class="section-padding">
+  <!-- ===================== HERO — INDUSTRIAL GRINDING ===================== -->
+  <header class="hero-abrasivos">
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 g-lg-5">
+
+        <!-- Col Izq: Imagen Hero con badges flotantes (IMAGEN A LA IZQUIERDA — diferencia de layout) -->
+        <div class="col-lg-5 reveal">
+          <div style="position:relative;">
+
+            <div class="abs-floating-badge badge-top">
+              <i class="fa-solid fa-fire text-success me-2"></i> Grano Cerámico 3M™
+            </div>
+
+            <div class="abs-hero-img-wrap">
+              <img src="../assets/images/abrasivos_hero.jpg"
+                alt="Operario aplicando disco abrasivo en planta industrial">
+            </div>
+
+            <div class="abs-floating-badge badge-bottom">
+              <i class="fa-solid fa-layer-group text-success me-2"></i> Acabado Ra &lt; 0.8 µm
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Col Der: Contenido de Texto -->
+        <div class="col-lg-7 reveal">
+          <div class="hero-badge-abrasivos">
+            <i class="fa-solid fa-fire-flame-curved me-2"></i> ABRASIVOS INDUSTRIALES DE ALTO DESEMPEÑO
+          </div>
+
+          <h1 class="hero-title-abrasivos">
+            Abrasivos para <span>Desbaste, Acabado</span><br>y Corte Industrial
+          </h1>
+
+          <div class="hero-bullets-abrasivos">
+            <div class="hero-bullet-abs">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Mayor vida útil de disco y banda</strong> con granos cerámicos y óxido de aluminio de alta
+                pureza.</span>
+            </div>
+            <div class="hero-bullet-abs">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Flap discs, fibra y láminas</strong> para desbaste agresivo, conformado y acabado
+                superficial en acero, inox y aluminio.</span>
+            </div>
+            <div class="hero-bullet-abs">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Asesoría técnica de aplicación</strong> para reducir el tiempo de proceso y el costo por
+                pieza.</span>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <a href="#contacto" class="btn btn-sb btn-lg">Solicitar cotización</a>
+            <a href="https://wa.me/528443402926" target="_blank" class="btn btn-light btn-lg rounded-pill">
+              <i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== STRIP DE CATEGORÍAS ABRASIVOS ===================== -->
+  <div class="trust-strip-abs">
     <div class="container">
-
-      <section class="pdf-card reveal">
-        <div class="pdf-card-head">
-          <div class="pdf-card-title">
-            <h1>Abrasivos</h1>
-            <p class="subtitle">Alto desempeño en desbaste, corte y acabado.</p>
-          </div>
-          <div class="pdf-card-image">
-            <img src="../assets/images/product-collage.png" alt="Discos y bandas abrasivas Shively Bros">
-          </div>
+      <div class="trust-strip-abs-grid">
+        <div class="trust-strip-abs-item">
+          <i class="fa-solid fa-compact-disc"></i>
+          <span>Discos de Corte &amp; Desbaste</span>
         </div>
-
-        <div class="pdf-card-body">
-          <p>En Shively Bros ofrecemos una línea completa de abrasivos diseñados para responder a las exigencias de
-            la industria moderna.</p>
-          <p>Nuestros productos garantizan precisión, resistencia y acabados de calidad superior en distintos
-            materiales. Trabajamos con soluciones especializadas que optimizan tiempos de operación y reducen el
-            desgaste en procesos productivos.</p>
+        <div class="trust-strip-abs-item">
+          <i class="fa-solid fa-wind"></i>
+          <span>Flap Discs &amp; Fibra</span>
         </div>
-
-        <div class="pdf-divider"></div>
-
-        <div class="pdf-list">
-          <div class="row">
-            <div class="col-md-6">
-              <ul>
-                <li>Discos abrasivos</li>
-                <li>Discos de corte</li>
-                <li>Bandas de lija y rollos de lija</li>
-                <li>Lijas en diferentes presentaciones</li>
-                <li>Rollos de fibra y rollos de lija</li>
-                <li>Cepillos</li>
-                <li>Puntas montadas</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Limas</li>
-                <li>Pastas y polish</li>
-                <li>Ruedas abrasivas de línea y especiales</li>
-                <li>Piedras</li>
-                <li>Dressers</li>
-                <li>Sierras</li>
-              </ul>
-            </div>
-          </div>
+        <div class="trust-strip-abs-item">
+          <i class="fa-solid fa-wave-square"></i>
+          <span>Bandas de Lija</span>
         </div>
-
-        <div class="pdf-card-photo">
-          <img src="../assets/images/sparks-photo.png" alt="Proceso de desbaste con disco abrasivo">
-        </div>
-      </section>
-
-      <div class="cta-band reveal">
-        <div>
-          <h3>¿Necesitas cotizar abrasivos para tu operación?</h3>
-          <p>Cuéntanos qué producto buscas y te apoyamos con disponibilidad y precio.</p>
-        </div>
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20abrasivos." target="_blank"
-            class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
-          <a href="#contacto" class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a>
+        <div class="trust-strip-abs-item">
+          <i class="fa-solid fa-circle-dot"></i>
+          <span>Ruedas &amp; Piedras Abrasivas</span>
         </div>
       </div>
+    </div>
+  </div>
 
+  <!-- ===================== MAIN: CATÁLOGO + FORMULARIO STICKY ===================== -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+
+        <!-- COLUMNA IZQUIERDA: CATÁLOGO Y MARCAS (8 cols) -->
+        <div class="col-lg-8">
+
+          <!-- 1. CATÁLOGO TÉCNICO (Grid 3 columnas) -->
+          <section class="reveal mb-5">
+            <span class="section-label">Catálogo Técnico</span>
+            <h2 class="section-title">Soluciones por <span>tipo de abrasivo</span></h2>
+
+            <div class="abs-grid">
+
+              <!-- Discos de Corte -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/discos_corte.webp"
+                    alt="Discos de corte industrial en planta metalmecánica">
+                  <div class="abs-card-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Discos de Corte</h3>
+                  <p class="abs-card-desc">Discos delgados de 1 mm para corte en seco de acero, inox y tubería. Mínima
+                    rebaba y acabado limpio en aplicaciones de metalmecánica.</p>
+                </div>
+              </div>
+
+              <!-- Discos de Desbaste -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/discos_desbaste.webp"
+                    alt="Chispas de desbaste con disco abrasivo en acero">
+                  <div class="abs-card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Discos de Desbaste</h3>
+                  <p class="abs-card-desc">Discos de 6 mm de espesor con grano de óxido de aluminio y zirconio para
+                    remover cordón de soldadura, rebabas y material excedente.</p>
+                </div>
+              </div>
+
+              <!-- Flap Discs -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/flap_disc.avif"
+                    alt="Flap disc de láminas abrasivas en proceso de acabado superficial">
+                  <div class="abs-card-icon"><i class="fa-solid fa-wind"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Flap Discs &amp; Láminas</h3>
+                  <p class="abs-card-desc">Flap discs planos y cónicos en granos 36–320 para desbaste–acabado en una
+                    sola pasada. Grano cerámico Cubitron™ y zirconia de alta duración.</p>
+                </div>
+              </div>
+
+              <!-- Bandas de Lija -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/bandas_lija.webp"
+                    alt="Bandas de lija en aplicación de lijado de superficies metálicas">
+                  <div class="abs-card-icon"><i class="fa-solid fa-wave-square"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Bandas de Lija</h3>
+                  <p class="abs-card-desc">Bandas anchas y estrechas para máquinas de lijado estacionarias y portátiles.
+                    Múltiples sustratos: tela, papel y combinación para superficies planas y contorneadas.</p>
+                </div>
+              </div>
+
+              <!-- Ruedas Abrasivas -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/ruedas_abrasivas.webp"
+                    alt="Rueda abrasiva en rectificadora CNC industrial">
+                  <div class="abs-card-icon"><i class="fa-solid fa-circle-dot"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Ruedas Abrasivas</h3>
+                  <p class="abs-card-desc">Muelas de rectificado cilíndrico, sin centros y de superficie plana en
+                    corindón, CBN y diamante para tolerancias IT5–IT6 en acero endurecido.</p>
+                </div>
+              </div>
+
+              <!-- Fibra y No-Tejido -->
+              <div class="abs-card">
+                <div class="abs-card-img">
+                  <img src="../assets/images/fibras_no-tejido.webp"
+                    alt="Material abrasivo de fibra no tejida para acabado satinado en acero inox">
+                  <div class="abs-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                </div>
+                <div class="abs-card-body">
+                  <h3 class="abs-card-title">Fibra &amp; No-Tejido</h3>
+                  <p class="abs-card-desc">Disco de fibra vulcanizada y material no-tejido para acabado satinado,
+                    eliminación de óxido y preparación de superficies previo a pintura o recubrimiento.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 2. BENEFICIOS OPERATIVOS -->
+          <section class="reveal mb-5">
+            <span class="section-label">Ventajas Operativas</span>
+            <h2 class="section-title">Por qué elegir <span>nuestros abrasivos</span></h2>
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <div class="p-4 bg-light rounded-4 border h-100 d-flex gap-3 align-items-start">
+                  <div class="p-3 bg-white rounded-3 border fs-4 flex-shrink-0" style="color:var(--sb-green);">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                  </div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Mayor tasa de remoción</h4>
+                    <p class="text-muted small mb-0">Granos cerámicos auto-afilantes que mantienen agresividad de corte
+                      durante toda la vida útil del disco.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-4 bg-light rounded-4 border h-100 d-flex gap-3 align-items-start">
+                  <div class="p-3 bg-white rounded-3 border fs-4 flex-shrink-0" style="color:var(--sb-green);">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Menor calentamiento</h4>
+                    <p class="text-muted small mb-0">Formulaciones de baja generación de calor para proteger materiales
+                      sensibles y evitar distorsión en piezas de precisión.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-4 bg-light rounded-4 border h-100 d-flex gap-3 align-items-start">
+                  <div class="p-3 bg-white rounded-3 border fs-4 flex-shrink-0" style="color:var(--sb-green);">
+                    <i class="fa-solid fa-coins"></i>
+                  </div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Menor costo por pieza</h4>
+                    <p class="text-muted small mb-0">Mayor duración de disco = menos cambios, menos paros y reducción
+                      directa del costo de operación por turno.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-4 bg-light rounded-4 border h-100 d-flex gap-3 align-items-start">
+                  <div class="p-3 bg-white rounded-3 border fs-4 flex-shrink-0" style="color:var(--sb-green);">
+                    <i class="fa-solid fa-user-gear"></i>
+                  </div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Selección técnica a medida</h4>
+                    <p class="text-muted small mb-0">Te ayudamos a elegir el grano, ligante y respaldo correcto según tu
+                      material, máquina y acabado requerido.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 3. MARCAS TOP 15 ABRASIVOS -->
+          <section class="reveal mb-4">
+            <span class="section-label">Respaldo de Marcas Globales</span>
+            <h2 class="section-title">Marcas que <span>comercializamos</span></h2>
+
+            <div class="brand-marquee-container">
+              <div class="brand-marquee-track">
+                <div class="brand-badge-item norton">Norton Abrasives</div>
+                <div class="brand-badge-item saint">Saint-Gobain</div>
+                <div class="brand-badge-item cubitron">3M Cubitron™ II</div>
+                <div class="brand-badge-item sia">SIA Abrasives</div>
+                <div class="brand-badge-item klingspor">Klingspor</div>
+                <div class="brand-badge-item">Walter Surface Tech</div>
+                <div class="brand-badge-item">Weiler Abrasives</div>
+                <div class="brand-badge-item">Pferd</div>
+                <div class="brand-badge-item">Mirka</div>
+                <div class="brand-badge-item">Bosch Professional</div>
+                <div class="brand-badge-item">Dewalt Industrial</div>
+                <div class="brand-badge-item">Tyrolit</div>
+                <div class="brand-badge-item">Flexovit</div>
+                <div class="brand-badge-item">CGW Abrasives</div>
+                <div class="brand-badge-item">Camel Grinding Wheels</div>
+                <!-- Duplicado para ciclo infinito -->
+                <div class="brand-badge-item norton">Norton Abrasives</div>
+                <div class="brand-badge-item saint">Saint-Gobain</div>
+                <div class="brand-badge-item cubitron">3M Cubitron™ II</div>
+                <div class="brand-badge-item sia">SIA Abrasives</div>
+                <div class="brand-badge-item klingspor">Klingspor</div>
+                <div class="brand-badge-item">Walter Surface Tech</div>
+                <div class="brand-badge-item">Weiler Abrasives</div>
+                <div class="brand-badge-item">Pferd</div>
+                <div class="brand-badge-item">Mirka</div>
+                <div class="brand-badge-item">Bosch Professional</div>
+                <div class="brand-badge-item">Dewalt Industrial</div>
+                <div class="brand-badge-item">Tyrolit</div>
+                <div class="brand-badge-item">Flexovit</div>
+                <div class="brand-badge-item">CGW Abrasives</div>
+                <div class="brand-badge-item">Camel Grinding Wheels</div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: FORMULARIO STICKY -->
+        <div class="col-lg-4">
+          <div style="position: sticky; top: 92px; z-index: 10;">
+            <div id="contacto" class="landing-lead-card reveal">
+
+              <span class="section-label mb-2">Contacto Directo</span>
+              <h3 class="section-title fs-4 mb-2">Cotiza tus <span>abrasivos industriales</span></h3>
+              <p class="section-text text-muted mb-4" style="font-size: .86rem;">
+                Dinos el tipo de material, aplicación y cantidad. Te enviamos la mejor opción de inmediato.
+              </p>
+
+              <form id="leadAbrasivosForm" class="row g-3">
+
+                <div class="col-12">
+                  <label for="leadName" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="leadName" name="name" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadCompany" class="form-label">Empresa</label>
+                  <input type="text" class="form-control" id="leadCompany" name="company" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="leadEmail" name="email" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="leadPhone" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="leadPhone" name="phone">
+                </div>
+
+                <div class="col-12">
+                  <label for="leadMessage" class="form-label">¿Qué abrasivo o aplicación necesitas?</label>
+                  <textarea class="form-control" id="leadMessage" name="message" rows="3" required></textarea>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-sb btn-lg w-100">
+                    Enviar mensaje <i class="bi bi-send ms-2"></i>
+                  </button>
+                </div>
+
+                <div class="col-12">
+                  <div class="trust-badge-lead">
+                    <i class="bi bi-shield-check"></i> Respuesta rápida y asesoría técnica.
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </main>
-
-  <!-- ===================== CONTACTO (mismo formulario del sitio principal) ===================== -->
-  <section id="contacto" class="section-padding soft-bg contact-section">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-5 reveal">
-          <span class="section-label">Contacto</span>
-          <h2 class="section-title">Cotiza tus <span>abrasivos</span> con nosotros</h2>
-          <p class="section-text">Estamos listos para atenderte. Contáctanos por formulario, WhatsApp o correo
-            electrónico y nuestro equipo dará seguimiento a tu solicitud.</p>
-          <div class="contact-list big">
-            <div><i class="bi bi-whatsapp whatsapp"></i>
-              <p><strong>WhatsApp</strong><br><a href="https://wa.me/528443402926" target="_blank">8443402926</a></p>
-            </div>
-            <div><i class="bi bi-envelope-fill email"></i>
-              <p><strong>Correo electrónico</strong><br><a
-                  href="mailto:ventasmx@shivelybros.com">ventasmx@shivelybros.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 reveal">
-          <div class="contact-form">
-            <form id="contactForm" class="row g-3">
-              <div class="col-md-6">
-                <label for="contactName" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="contactName" name="name" required>
-              </div>
-              <div class="col-md-6">
-                <label for="contactCompany" class="form-label">Empresa</label>
-                <input type="text" class="form-control" id="contactCompany" name="company" required>
-              </div>
-              <div class="col-12">
-                <label for="contactEmail" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="contactEmail" name="email" required>
-              </div>
-              <div class="col-12">
-                <label for="contactMessage" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="contactMessage" name="message" rows="5"
-                  placeholder="Producto, cantidad o especificación que necesitas" required></textarea>
-              </div>
-              <div class="col-12 d-flex justify-content-end">
-                <button type="submit" class="btn btn-sb btn-lg" style="width: 100%;">
-                  Enviar mensaje <i class="bi bi-send ms-2"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
@@ -784,64 +971,62 @@
     </div>
   </footer>
 
+  <!-- Floating WhatsApp Bubble -->
   <a href="https://wa.me/528443402926" target="_blank" rel="noopener" class="whatsapp-float"
     aria-label="Contactar por WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
-  <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Back To Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Botón volver arriba
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('show', window.scrollY > 500);
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Cerrar menú móvil al hacer clic en un enlace
-    document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .dropdown-item').forEach(link => {
-      link.addEventListener('click', () => {
-        const menu = document.querySelector('#menuPrincipal');
-        if (menu.classList.contains('show')) {
-          bootstrap.Collapse.getOrCreateInstance(menu).hide();
-        }
-      });
-    });
-
-    // Animaciones al hacer scroll
+    // Intersection Observer para revelar elementos suavemente
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: .12 });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Formulario de contacto: arma el correo de ventas y redirige a la página de agradecimiento
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const nombre = document.getElementById('contactName').value.trim();
-        const empresa = document.getElementById('contactCompany').value.trim();
-        const correo = document.getElementById('contactEmail').value.trim();
-        const mensaje = document.getElementById('contactMessage').value.trim();
+    // Botón volver arriba
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 400);
+      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
 
-        const subject = 'Solicitud de información';
+    // Envío por Mailto a ventasmx@shivelybros.com
+    const leadForm = document.getElementById('leadAbrasivosForm');
+    if (leadForm) {
+      leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('leadName').value.trim();
+        const company = document.getElementById('leadCompany').value.trim();
+        const email = document.getElementById('leadEmail').value.trim();
+        const phone = document.getElementById('leadPhone').value.trim();
+        const message = document.getElementById('leadMessage').value.trim();
+
+        const subject = 'Solicitud de cotización - Abrasivos Industriales';
         const body = [
-          `Nombre: ${nombre}`,
-          `Empresa: ${empresa}`,
-          `Correo: ${correo}`,
-          `Mensaje: ${mensaje}`
+          `Nombre: ${name}`,
+          `Empresa: ${company}`,
+          `Correo: ${email}`,
+          `Teléfono: ${phone || 'N/A'}`,
+          `Requerimiento: ${message}`
         ].join('\r\n');
+
         const mailto = `mailto:ventasmx@shivelybros.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailto;
-        setTimeout(() => {
-          window.location.href = '../gracias.html';
-        }, 250);
       });
     }
   </script>
+
 </body>
 
 </html>
