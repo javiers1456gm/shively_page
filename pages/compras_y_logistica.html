@@ -79,6 +79,11 @@
       scroll-behavior: smooth;
     }
 
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--sb-black);
@@ -158,6 +163,39 @@
       background: var(--sb-green-dark);
       color: #fff;
       transform: translateY(-2px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-actions .hero-btn {
+      min-height: 48px;
+      padding: 11px 23px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .hero-actions .hero-btn-whatsapp {
+      background: #fff;
+      border: 1px solid #e1e5e2;
+      color: var(--sb-green);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, .08);
+    }
+
+    .hero-actions .hero-btn-whatsapp:hover {
+      background: #f4faf5;
+      border-color: #c8dfcd;
+      color: var(--sb-green-dark);
+      transform: translateY(-2px);
+    }
+
+    .hero-actions .hero-btn-whatsapp i {
+      font-size: 1.2rem;
     }
 
     /* ===================== NAVBAR (igual al sitio principal) ===================== */
@@ -721,6 +759,197 @@
       opacity: 1;
       transform: none;
     }
+
+    .logistics-hero {
+      background: linear-gradient(135deg, #f3faf5 0%, #ffffff 56%, #eef8f1 100%);
+      padding: 72px 0 68px;
+      overflow: hidden;
+    }
+
+    .breadcrumb-strip {
+      margin-top: 104px !important;
+    }
+
+    .logistics-hero .section-label {
+      margin-bottom: 16px;
+    }
+
+    .logistics-hero h1 {
+      max-width: 720px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      font-weight: 800;
+      margin: 0 0 22px;
+    }
+
+    .logistics-hero h1 span {
+      color: var(--sb-green);
+    }
+
+    .logistics-hero-copy {
+      color: var(--sb-gray);
+      font-size: 1.08rem;
+      line-height: 1.8;
+      max-width: 630px;
+      margin-bottom: 28px;
+    }
+
+    .logistics-visual {
+      position: relative;
+      margin-left: auto;
+      max-width: 570px;
+    }
+
+    .logistics-visual img {
+      width: 100%;
+      aspect-ratio: 1.2 / 1;
+      object-fit: cover;
+      border-radius: 28px;
+      display: block;
+      box-shadow: 0 24px 60px rgba(20, 70, 35, .2);
+    }
+
+    .visual-badge {
+      position: absolute;
+      left: -24px;
+      bottom: 28px;
+      background: #fff;
+      border-left: 5px solid var(--sb-green);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, .14);
+    }
+
+    .visual-badge strong {
+      display: block;
+      color: var(--sb-green);
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .visual-badge span {
+      color: var(--sb-gray);
+      font-size: .78rem;
+    }
+
+    .offer-section {
+      padding: 76px 0 72px;
+    }
+
+    .offer-intro {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .offer-card {
+      height: 100%;
+      padding: 30px;
+      border: 1px solid #e5ebe6;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, .06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 38px rgba(15, 23, 42, .11);
+    }
+
+    .offer-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sb-green);
+      background: #e9f7ed;
+      font-size: 1.45rem;
+      margin-bottom: 22px;
+    }
+
+    .offer-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .offer-card p {
+      color: var(--sb-gray);
+      font-size: .92rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .process-section {
+      background: #f5f8f5;
+      padding: 82px 0;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 0 22px 0 58px;
+    }
+
+    .process-step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--sb-green);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--sb-gray);
+      font-size: .88rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    @media (max-width: 991px) {
+      .logistics-hero {
+        padding-top: 62px;
+      }
+
+      .logistics-visual {
+        margin: 20px auto 0;
+      }
+
+    }
+
+    @media (max-width: 575px) {
+      .logistics-hero {
+        padding: 48px 0 54px;
+      }
+
+      .logistics-hero h1 {
+        letter-spacing: -.8px;
+      }
+
+      .visual-badge {
+        left: 14px;
+        bottom: 14px;
+      }
+
+      .offer-section,
+      .process-section {
+        padding: 64px 0;
+      }
+    }
   </style>
 </head>
 
@@ -774,64 +1003,108 @@
     </div>
   </div>
 
-  <!-- ===================== CONTENIDO FIEL AL PDF ===================== -->
-  <main class="section-padding">
-    <div class="container">
-
-      <section class="logistics-card reveal">
-        <div class="logistics-photo">
-          <img src="../assets/images/compras-y-logistica/warehouse-photo.png"
-            alt="Almacén industrial con montacargas Shively Bros">
-        </div>
-
-        <div class="logistics-head">
-          <span class="logistics-icon"><i class="bi bi-arrow-left-right"></i></span>
-          <h1>Compras y Logística</h1>
-        </div>
-
-        <p class="logistics-desc">Servicios de procurement, abastecimiento y logística para asegurar la entrega
-          oportuna y eficiente de productos industriales. Apoyamos a nuestros clientes con soluciones de suministro
-          enfocadas en continuidad operativa, seguimiento y respuesta comercial.</p>
-      </section>
-
-      <div class="row g-4 logistics-features">
-        <div class="col-md-6 reveal">
-          <div class="feature-card">
-            <h3>Enfoque de servicio</h3>
-            <ul>
-              <li>Coordinación de compras y abastecimiento.</li>
-              <li>Seguimiento comercial a requerimientos.</li>
-              <li>Apoyo en disponibilidad y suministro.</li>
-              <li>Comunicación ágil para cotizaciones.</li>
-            </ul>
+  <!-- ===================== LANDING COMERCIAL ===================== -->
+  <main>
+    <header class="logistics-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 reveal">
+            <span class="section-label">Compras y logística industrial</span>
+            <h1>Tu operación necesita <span>flujo, no interrupciones.</span></h1>
+            <p class="logistics-hero-copy">Centraliza tus requerimientos industriales con un equipo que coordina el
+              abastecimiento, da seguimiento a cada solicitud y te ayuda a recibir lo que necesitas a tiempo.</p>
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-sb hero-btn">Solicitar cotización</a>
+              <a href="https://wa.me/528443402926?text=Hola%2C%20necesito%20apoyo%20con%20compras%20y%20log%C3%ADstica%20industrial."
+                target="_blank" class="btn hero-btn hero-btn-whatsapp"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 reveal">
-          <div class="feature-card">
-            <h3>Valor para tu operación</h3>
-            <ul>
-              <li>Entrega oportuna y mejor control.</li>
-              <li>Reducción de faltantes en operación.</li>
-              <li>Atención personalizada para clientes.</li>
-              <li>Soluciones alineadas a manufactura.</li>
-            </ul>
+          <div class="col-lg-5 reveal">
+            <div class="logistics-visual">
+              <img src="../assets/images/ventas.jpg" alt="Operación de almacén y distribución industrial">
+
+            </div>
           </div>
         </div>
       </div>
+    </header>
 
-      <div class="cta-band reveal">
-        <div>
-          <h3>Distribución industrial con enfoque en continuidad operativa</h3>
-          <p>Comercializamos productos y soluciones para que tus procesos sigan avanzando con soporte confiable.</p>
+    <section class="offer-section">
+      <div class="container">
+        <div class="offer-intro reveal">
+          <span class="section-label">Lo que resolvemos</span>
+          <h2 class="section-title">Compras industriales que <span>sí dan seguimiento</span></h2>
+          <p class="section-text mb-0">Cuando tu equipo necesita agilidad, conectamos el requerimiento correcto con una
+            respuesta clara y una ruta de suministro confiable.</p>
         </div>
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20servicios%20de%20compras%20y%20log%C3%ADstica."
-            target="_blank" class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
-          <a href="#contacto" class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <article class="offer-card">
+              <div class="offer-card-icon"><i class="bi bi-cart-check"></i></div>
+              <h3>Procurement para tu planta</h3>
+              <p>Apoyo en la búsqueda, cotización y coordinación de suministros industriales según tus necesidades
+                operativas.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="offer-card">
+              <div class="offer-card-icon"><i class="bi bi-box-seam"></i></div>
+              <h3>Abastecimiento sin vueltas</h3>
+              <p>Consolidamos requerimientos y damos claridad sobre disponibilidad, tiempos y próximos pasos.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="offer-card">
+              <div class="offer-card-icon"><i class="bi bi-truck"></i></div>
+              <h3>Logística con visibilidad</h3>
+              <p>Coordinamos el flujo de entrega para que tu equipo tenga información y pueda planear mejor.</p>
+            </article>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section class="process-section">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7 reveal"><span class="section-label">Así trabajamos</span>
+            <h2 class="section-title mb-0">De tu requerimiento a la <span>entrega coordinada</span></h2>
+          </div>
+          <div class="col-lg-5 reveal">
+            <p class="section-text mb-0">Un proceso simple para que puedas avanzar con decisiones claras y menos carga
+              administrativa.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3 reveal">
+            <div class="process-step"><span class="process-step-number">1</span>
+              <h3>Cuéntanos qué necesitas</h3>
+              <p>Comparte producto, cantidades, fechas o cualquier detalle de tu operación.</p>
+            </div>
+          </div>
+          <div class="col-md-3 reveal">
+            <div class="process-step"><span class="process-step-number">2</span>
+              <h3>Recibe una propuesta</h3>
+              <p>Revisamos tu solicitud y te presentamos una alternativa comercial.</p>
+            </div>
+          </div>
+          <div class="col-md-3 reveal">
+            <div class="process-step"><span class="process-step-number">3</span>
+              <h3>Coordinamos el suministro</h3>
+              <p>Damos seguimiento a la disponibilidad y a la programación de entrega.</p>
+            </div>
+          </div>
+          <div class="col-md-3 reveal">
+            <div class="process-step"><span class="process-step-number">4</span>
+              <h3>Mantén tu operación en marcha</h3>
+              <p>Tu equipo recibe atención y visibilidad para planear el siguiente paso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
   <!-- ===================== CONTACTO (mismo formulario del sitio principal) ===================== -->
