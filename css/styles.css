@@ -144,6 +144,39 @@
    transform: translateY(-2px)
  }
 
+ .hero-actions {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 14px;
+ }
+
+ .hero-actions .hero-btn {
+   min-height: 48px;
+   padding: 11px 23px;
+   border-radius: 999px;
+   font-size: 1rem;
+   font-weight: 700;
+   line-height: 1.35;
+ }
+
+ .hero-actions .hero-btn-whatsapp {
+   background: #fff;
+   border: 1px solid #e1e5e2;
+   color: var(--sb-green);
+   box-shadow: 0 8px 20px rgba(15, 23, 42, .08);
+ }
+
+ .hero-actions .hero-btn-whatsapp:hover {
+   background: #f4faf5;
+   border-color: #c8dfcd;
+   color: var(--sb-green-dark);
+   transform: translateY(-2px);
+ }
+
+ .hero-actions .hero-btn-whatsapp i {
+   font-size: 1.2rem;
+ }
+
  .hero-section {
    position: relative;
    overflow: hidden;
