@@ -23,13 +23,14 @@
       const originalButtonText = submitButton?.innerHTML;
       const formData = new FormData(form);
       const value = (name) => String(formData.get(name) || '').trim();
+      const origen = form.dataset.origen || 'General';
       const payload = {
         nombre: value('nombre') || value('name'),
         correo: value('correo') || value('email'),
         telefono: value('telefono') || value('phone'),
         empresa: value('empresa') || value('company'),
         mensaje: value('mensaje') || value('message'),
-        origen: form.dataset.origen || pageOrigin,
+        origen: origen,
         website: value('website'),
       };
 
