@@ -388,6 +388,371 @@
       }
     }
 
+    /* ===================== REDISENO MRO ===================== */
+    .hero-mro {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 80px;
+      color: #fff;
+      background: linear-gradient(135deg, #091310 0%, #0d1f18 50%, #0e2a1e 100%);
+    }
+
+    .hero-mro::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0, 127, 36, .13) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .hero-mro::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 10%, rgba(74, 222, 128, .5) 50%, transparent 90%);
+    }
+
+    .mro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(74, 222, 128, .3);
+      border-radius: 999px;
+      background: rgba(0, 127, 36, .16);
+      color: #4ade80;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .mro-title {
+      max-width: 720px;
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: clamp(2rem, 3.6vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -.02em;
+    }
+
+    .mro-title span {
+      color: #4ade80;
+    }
+
+    .mro-lead {
+      max-width: 690px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, .86);
+      font-size: 1.03rem;
+      line-height: 1.8;
+    }
+
+    .mro-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .mro-hero-actions .mro-hero-btn {
+      min-height: 48px;
+      padding: 11px 23px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .mro-hero-actions .mro-whatsapp {
+      border: 1px solid #e1e5e2;
+      background: #fff;
+      color: var(--sb-green);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .16);
+    }
+
+    .mro-hero-actions .mro-whatsapp:hover {
+      background: #f4faf5;
+      color: var(--sb-green-dark);
+      transform: translateY(-2px);
+    }
+
+    .mro-hero-visual {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .04);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .5);
+    }
+
+    .mro-hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+
+    .mro-hero-visual:hover img {
+      transform: scale(1.04);
+    }
+
+    .mro-floating-badge {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 16px;
+      background: rgba(9, 19, 16, .92);
+      color: #fff;
+      font-size: .84rem;
+      font-weight: 700;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .35);
+    }
+
+    .mro-floating-badge i {
+      color: #4ade80;
+    }
+
+    .mro-floating-badge.top {
+      top: 22px;
+      right: 22px;
+    }
+
+    .mro-floating-badge.bottom {
+      bottom: 22px;
+      left: 22px;
+    }
+
+    .mro-stats {
+      padding: 24px 0;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fff;
+    }
+
+    .mro-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .mro-stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      background: #f8faf9;
+    }
+
+    .mro-stat i {
+      color: var(--sb-green);
+      font-size: 1.35rem;
+    }
+
+    .mro-stat strong {
+      display: block;
+      color: #1f2937;
+      font-size: .95rem;
+    }
+
+    .mro-stat span {
+      display: block;
+      color: var(--sb-gray);
+      font-size: .76rem;
+    }
+
+    .mro-catalog {
+      padding: 76px 0 42px;
+    }
+
+    .mro-catalog-intro {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .mro-catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .mro-family {
+      height: 100%;
+      padding: 22px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: #fff;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .mro-family:hover {
+      border-color: var(--sb-green);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 127, 36, .1);
+    }
+
+    .mro-family-head {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 16px;
+    }
+
+    .mro-family-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: #e9f7ed;
+      color: var(--sb-green);
+      font-size: 1.3rem;
+    }
+
+    .mro-family h3 {
+      margin: 0;
+      color: #111827;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .mro-family p {
+      margin: 0 0 14px;
+      color: var(--sb-gray);
+      font-size: .84rem;
+      line-height: 1.55;
+    }
+
+    .mro-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .mro-tag {
+      padding: 5px 9px;
+      border: 1px solid #dce8df;
+      border-radius: 999px;
+      background: #f7fbf8;
+      color: #31513b;
+      font-size: .73rem;
+      font-weight: 600;
+      transition: transform .28s ease, border-color .28s ease, background-color .28s ease, box-shadow .28s ease;
+    }
+
+    .mro-family:hover .mro-tag {
+      border-color: #b8d7c0;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 127, 36, .08);
+    }
+
+    .mro-family:hover .mro-tag:nth-child(odd) {
+      transform: translateY(-3px);
+    }
+
+    .mro-family:hover .mro-tag:nth-child(even) {
+      transform: translateY(2px);
+    }
+
+    .mro-family:hover .mro-family-icon {
+      transform: rotate(-4deg) scale(1.04);
+    }
+
+    .mro-family-icon {
+      transition: transform .3s ease, background-color .3s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .mro-family,
+      .mro-tag,
+      .mro-family-icon {
+        transition: none;
+      }
+
+      .mro-family:hover .mro-tag,
+      .mro-family:hover .mro-family-icon {
+        transform: none;
+      }
+    }
+
+    .mro-wide-panel {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-top: 54px;
+      padding: 28px;
+      border-radius: 24px;
+      background: #f5f8f5;
+    }
+
+    .mro-wide-panel img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 18px;
+    }
+
+    .mro-wide-panel h3 {
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .mro-wide-panel p {
+      margin: 0;
+      color: var(--sb-gray);
+      line-height: 1.75;
+    }
+
+    .mro-catalog .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 991px) {
+
+      .mro-stats-grid,
+      .mro-catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero-mro {
+        padding: 56px 0 64px;
+      }
+
+      .mro-stats-grid,
+      .mro-catalog-grid,
+      .mro-wide-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .mro-hero-visual {
+        height: 300px;
+      }
+
+      .mro-catalog {
+        padding: 56px 0 28px;
+      }
+
+      .mro-wide-panel {
+        padding: 20px;
+      }
+    }
+
     /* ===================== CTA BAND ===================== */
     .cta-band {
       background: var(--sb-green);
@@ -659,83 +1024,192 @@
     </div>
   </div>
 
-  <!-- ===================== CONTENIDO FIEL AL PDF ===================== -->
-  <main class="section-padding">
+  <!-- ===================== HERO MRO ===================== -->
+  <header class="hero-mro">
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-5 reveal">
+          <div class="mro-hero-visual">
+            <div class="mro-floating-badge top"><i class="bi bi-boxes"></i> Miles de posibilidades</div>
+            <img src="../assets/images/mro2.png" alt="Materiales y suministros MRO industriales">
+            <div class="mro-floating-badge bottom"><i class="bi bi-tools"></i> Mantenimiento sin pausas</div>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <div class="mro-badge"><i class="bi bi-grid-3x3-gap-fill"></i> SUMINISTRO MRO INDUSTRIAL</div>
+          <h1 class="mro-title">Todo lo que tu planta necesita para <span>seguir operando</span></h1>
+          <p class="mro-lead">Una sola fuente para mantenimiento, reparación y operación: desde refacciones y
+            componentes
+            hasta herramientas, seguridad y consumibles industriales.</p>
+          <div class="mro-hero-actions">
+            <a href="#catalogo-mro" class="btn btn-sb mro-hero-btn">Explorar categorías</a>
+            <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20productos%20MRO." target="_blank"
+              class="btn mro-hero-btn mro-whatsapp"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="mro-stats" aria-label="Cobertura MRO">
     <div class="container">
-
-      <section class="pdf-card reveal">
-        <div class="pdf-card-head">
-          <div class="pdf-card-title">
-            <h1>MRO</h1>
-            <p class="subtitle">Todo lo necesario para mantener tu operación en marcha.</p>
-          </div>
-          <div class="pdf-card-image">
-            <img src="../assets/images/mro1.png" alt="Icono de mantenimiento industrial Shively Bros">
-          </div>
+      <div class="mro-stats-grid">
+        <div class="mro-stat"><i class="bi bi-boxes"></i>
+          <div><strong>12 familias MRO</strong><span>Una cobertura amplia</span></div>
         </div>
-
-        <div class="pdf-card-body">
-          <p>Nuestra línea MRO está diseñada para cubrir las necesidades diarias de mantenimiento industrial,
-            asegurando la continuidad operativa y reduciendo tiempos de paro.</p>
-          <p>En Shively Bros entendemos que cada minuto cuenta, por eso ofrecemos productos confiables y de
-            disponibilidad inmediata.</p>
+        <div class="mro-stat"><i class="bi bi-building-gear"></i>
+          <div><strong>Para planta y taller</strong><span>Operación diaria</span></div>
         </div>
+        <div class="mro-stat"><i class="bi bi-search"></i>
+          <div><strong>Búsqueda especializada</strong><span>Encontramos lo que necesitas</span></div>
+        </div>
+        <div class="mro-stat"><i class="bi bi-truck"></i>
+          <div><strong>Un solo proveedor</strong><span>Menos vueltas de compra</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="pdf-divider"></div>
+  <!-- ===================== CATALOGO MRO ===================== -->
+  <main id="catalogo-mro" class="mro-catalog">
+    <div class="container">
+      <div class="mro-catalog-intro reveal">
+        <span class="section-label">Cobertura de suministro</span>
+        <h2 class="section-title">Un catálogo amplio para resolver <span>más necesidades</span></h2>
+        <p class="section-text mb-0">Explora nuestras principales familias de productos MRO. Si no encuentras una pieza
+          específica, compártenos la marca, modelo o aplicación y la buscamos contigo.</p>
+      </div>
 
-        <div class="pdf-list">
-          <div class="row">
-            <div class="col-md-6">
-              <ul>
-                <li>Bombas.</li>
-                <li>Válvulas.</li>
-                <li>Motores.</li>
-                <li>Servomotores y servovalvulas.</li>
-                <li>Tarjetas Electrónicas.</li>
-                <li>Componentes Electrónicos.</li>
-                <li>Herramientas manuales y neumáticas.</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Manejo de materiales.</li>
-                <li>Fuixtures o sistemas de fijación.</li>
-                <li>Manipuladores.</li>
-                <li>Refaccionamiento para maquinaria.</li>
-                <li>Tornos, fresas, cortadoras, sierracintos.</li>
-                <li>Trapo especializado.</li>
-                <li>Absorbentes.</li>
-              </ul>
-            </div>
+      <div class="mro-catalog-grid">
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-water"></i></div>
+            <h3>Bombas y fluidos</h3>
           </div>
-          <div class="pdf-list-extra-wrap">
-            <div class="pdf-list-extra">
-              <ul>
-                <li>Equipo para etiquetado y marcaje.</li>
-                <li>Tapetes industriales.</li>
-                <li>Lijadoras neumáticas y eléctricas.</li>
-              </ul>
-            </div>
+          <p>Equipos y componentes para mover, controlar y mantener tus sistemas.</p>
+          <div class="mro-tags"><span class="mro-tag">Bombas</span><span class="mro-tag">Mangueras</span><span
+              class="mro-tag">Conexiones</span><span class="mro-tag">Sellos</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-sliders2"></i></div>
+            <h3>Válvulas y control</h3>
           </div>
-        </div>
+          <p>Soluciones para regular presión, flujo y condiciones de proceso.</p>
+          <div class="mro-tags"><span class="mro-tag">Válvulas</span><span class="mro-tag">Actuadores</span><span
+              class="mro-tag">Reguladores</span><span class="mro-tag">Accesorios</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-gear-wide-connected"></i></div>
+            <h3>Motores y transmisión</h3>
+          </div>
+          <p>Refacciones para movimiento, potencia y automatización de maquinaria.</p>
+          <div class="mro-tags"><span class="mro-tag">Motores</span><span class="mro-tag">Servomotores</span><span
+              class="mro-tag">Reductores</span><span class="mro-tag">Acoplamientos</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-tools"></i></div>
+            <h3>Herramienta manual</h3>
+          </div>
+          <p>Herramientas para mantenimiento, ajuste, ensamble y reparación.</p>
+          <div class="mro-tags"><span class="mro-tag">Llaves</span><span class="mro-tag">Dados</span><span
+              class="mro-tag">Pinzas</span><span class="mro-tag">Desarmadores</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-lightning-charge"></i></div>
+            <h3>Herramienta eléctrica y neumática</h3>
+          </div>
+          <p>Equipos portátiles para acelerar trabajos de intervención y producción.</p>
+          <div class="mro-tags"><span class="mro-tag">Lijadoras</span><span class="mro-tag">Taladros</span><span
+              class="mro-tag">Esmeriles</span><span class="mro-tag">Impactos</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-cpu"></i></div>
+            <h3>Control y electrónica</h3>
+          </div>
+          <p>Componentes para diagnóstico, control y continuidad de tus equipos.</p>
+          <div class="mro-tags"><span class="mro-tag">Tarjetas</span><span class="mro-tag">Sensores</span><span
+              class="mro-tag">Relés</span><span class="mro-tag">Fuentes</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-arrows-move"></i></div>
+            <h3>Manejo de materiales</h3>
+          </div>
+          <p>Elementos para mover, posicionar y manipular materiales con seguridad.</p>
+          <div class="mro-tags"><span class="mro-tag">Manipuladores</span><span class="mro-tag">Rieles</span><span
+              class="mro-tag">Ruedas</span><span class="mro-tag">Transportadores</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-bounding-box"></i></div>
+            <h3>Fijación y sujeción</h3>
+          </div>
+          <p>Componentes para asegurar piezas, herramental, fixtures y estaciones.</p>
+          <div class="mro-tags"><span class="mro-tag">Fixtures</span><span class="mro-tag">Abrazaderas</span><span
+              class="mro-tag">Tornillería</span><span class="mro-tag">Soportes</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-wrench-adjustable"></i></div>
+            <h3>Refacciones de maquinaria</h3>
+          </div>
+          <p>Reemplazos para mantener tus equipos disponibles y reducir paros.</p>
+          <div class="mro-tags"><span class="mro-tag">Tornos</span><span class="mro-tag">Fresas</span><span
+              class="mro-tag">Cortadoras</span><span class="mro-tag">Sierras cinta</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-tags"></i></div>
+            <h3>Marcaje y etiquetado</h3>
+          </div>
+          <p>Identificación de piezas, materiales, activos y ubicaciones de planta.</p>
+          <div class="mro-tags"><span class="mro-tag">Etiquetas</span><span class="mro-tag">Marcadores</span><span
+              class="mro-tag">Impresoras</span><span class="mro-tag">Consumibles</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Seguridad y absorbentes</h3>
+          </div>
+          <p>Materiales para proteger personas, equipos y áreas de trabajo.</p>
+          <div class="mro-tags"><span class="mro-tag">Absorbentes</span><span class="mro-tag">EPP</span><span
+              class="mro-tag">Señalización</span><span class="mro-tag">Contención</span></div>
+        </article>
+        <article class="mro-family reveal">
+          <div class="mro-family-head">
+            <div class="mro-family-icon"><i class="bi bi-brush"></i></div>
+            <h3>Limpieza y operación</h3>
+          </div>
+          <p>Consumibles para conservar estaciones, líneas y áreas industriales.</p>
+          <div class="mro-tags"><span class="mro-tag">Trapo técnico</span><span class="mro-tag">Tapetes</span><span
+              class="mro-tag">Químicos</span><span class="mro-tag">Cepillos</span></div>
+        </article>
+      </div>
 
-        <div class="pdf-card-photo">
-          <img src="../assets/images/mro2.png" alt="Casco, guantes y materiales industriales Shively Bros">
+      <div class="mro-wide-panel reveal">
+        <img src="../assets/images/mro2.webp" alt="Suministros MRO para mantenimiento industrial">
+        <div><span class="section-label">¿Buscas algo específico?</span>
+          <h3>Tu requerimiento puede ser más grande que una categoría</h3>
+          <p>Envíanos una foto, número de parte, marca o descripción. Nuestro equipo revisa opciones y te ayuda a
+            encontrar el suministro adecuado para tu operación.</p>
         </div>
-      </section>
+      </div>
 
       <div class="cta-band reveal">
         <div>
           <h3>¿Necesitas cotizar productos MRO?</h3>
           <p>Cuéntanos qué producto buscas y te apoyamos con disponibilidad y precio.</p>
         </div>
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20productos%20MRO." target="_blank"
-            class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
-          <a href="#contacto" class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a>
-        </div>
+        <div class="d-flex gap-2 flex-wrap"><a
+            href="https://wa.me/528443402926?text=Hola%2C%20quisiera%20cotizar%20productos%20MRO." target="_blank"
+            class="btn btn-light-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a><a href="#contacto"
+            class="btn btn-light-cta"><i class="bi bi-envelope me-2"></i>Ir al formulario</a></div>
       </div>
-
     </div>
   </main>
 
