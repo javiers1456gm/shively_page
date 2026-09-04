@@ -1033,7 +1033,7 @@
                 Llena el formulario y nuestro equipo dará seguimiento inmediato a tu solicitud.
               </p>
 
-              <form id="leadLandingForm" class="row g-3">
+              <form id="leadLandingForm" class="row g-3" data-origen="instrumentos-de-medicion">
 
                 <div class="col-12">
                   <label for="leadName" class="form-label">Nombre completo</label>
@@ -1052,7 +1052,7 @@
 
                 <div class="col-12">
                   <label for="leadPhone" class="form-label">Teléfono</label>
-                  <input type="tel" class="form-control" id="leadPhone" name="phone">
+                  <input type="tel" class="form-control" id="leadPhone" name="phone" required>
                 </div>
 
                 <div class="col-12">
@@ -1120,6 +1120,7 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/contact-form.js"></script>
   <script>
     // Intersection Observer para revelar elementos suavemente
     const observer = new IntersectionObserver((entries) => {

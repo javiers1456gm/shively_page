@@ -1,0 +1,7 @@
+{
+  "name": "shively-page",
+  "private": true,
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+}
