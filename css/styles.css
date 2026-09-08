@@ -1439,6 +1439,11 @@
  }
 
  @media(max-width:767px) {
+   .location-section .row {
+     row-gap: 0 !important;
+     --bs-gutter-y: 1rem !important;
+   }
+
    .pin-popup {
      left: 16px;
      right: 16px;
@@ -1453,7 +1458,7 @@
    }
 
    .coverage-panel {
-     margin-top: 1.5rem;
+     margin-top: 0;
    }
  }
 
