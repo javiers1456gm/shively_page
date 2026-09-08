@@ -198,22 +198,24 @@
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
       padding: 20px 0;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
     }
 
     .trust-strip-grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
     }
 
     .trust-strip-item {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: .9rem;
+      min-height: 72px;
+      padding: 14px 16px;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      background: #f8faf9;
+      font-size: .88rem;
       font-weight: 700;
       color: #374151;
     }
@@ -221,6 +223,23 @@
     .trust-strip-item i {
       font-size: 1.35rem;
       color: var(--sb-green);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 991px) {
+      .trust-strip-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 575px) {
+      .trust-strip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-strip-item {
+        min-height: 64px;
+      }
     }
 
     /* ===================== PRODUCT GRID (¿QUÉ INCLUYE?) ===================== */
@@ -762,7 +781,7 @@
         </div>
         <div class="trust-strip-item">
           <i class="fa-solid fa-award"></i>
-          <span>Marcas Líderes Globles</span>
+          <span>Marcas Líderes Globales</span>
         </div>
         <div class="trust-strip-item">
           <i class="fa-solid fa-user-gear"></i>
