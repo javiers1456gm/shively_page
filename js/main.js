@@ -3,7 +3,12 @@ window.addEventListener('scroll',()=>{backToTop.classList.toggle('show',window.s
 backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link=>{link.addEventListener('click',()=>{const menu=document.querySelector('#menuPrincipal');if(menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();})});
+document.querySelector('#menuPrincipal')?.addEventListener('click',(event)=>{
+  const link=event.target.closest('.nav-link:not(.dropdown-toggle), .dropdown-item');
+  if(!link) return;
+  const menu=document.querySelector('#menuPrincipal');
+  if(menu?.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+});
 
 const pdfModal=document.getElementById('pdfModal');
 const pdfFrame=document.getElementById('pdfFrame');

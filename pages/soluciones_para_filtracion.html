@@ -868,6 +868,9 @@
         }
 
         @media (max-width: 991px) {
+            .sb-navbar+.hero-filtracion {
+                padding-top: 144px;
+            }
 
             .filtration-trust-grid,
             .filtration-grid {
@@ -948,17 +951,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- ===================== BREADCRUMB ===================== -->
-    <div class="breadcrumb-strip" style="margin-top:72px;">
-        <div class="container">
-            <a href="../index.html">Inicio</a>
-            <i class="bi bi-chevron-right"></i>
-            <a href="../index.html#productos">Soluciones</a>
-            <i class="bi bi-chevron-right"></i>
-            <span class="current">Soluciones para Filtración</span>
-        </div>
-    </div>
 
     <!-- ===================== HERO DE FILTRACION ===================== -->
     <header class="hero-filtracion">
@@ -1181,13 +1173,11 @@
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
         // Cerrar menú móvil al hacer clic en un enlace
-        document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .dropdown-item').forEach(link => {
-            link.addEventListener('click', () => {
-                const menu = document.querySelector('#menuPrincipal');
-                if (menu.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
-                }
-            });
+        document.querySelector('#menuPrincipal')?.addEventListener('click', (event) => {
+            const link = event.target.closest('.nav-link:not(.dropdown-toggle), .dropdown-item');
+            if (!link) return;
+            const menu = document.querySelector('#menuPrincipal');
+            if (menu?.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
         });
 
         // Animaciones al hacer scroll

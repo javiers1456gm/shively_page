@@ -722,6 +722,9 @@
     }
 
     @media (max-width: 991px) {
+      .sb-navbar+.hero-mro {
+        padding-top: 144px;
+      }
 
       .mro-stats-grid,
       .mro-catalog-grid {
@@ -1013,17 +1016,6 @@
     </div>
   </nav>
 
-  <!-- ===================== BREADCRUMB ===================== -->
-  <div class="breadcrumb-strip" style="margin-top:72px;">
-    <div class="container">
-      <a href="../index.html">Inicio</a>
-      <i class="bi bi-chevron-right"></i>
-      <a href="../index.html#productos">Soluciones</a>
-      <i class="bi bi-chevron-right"></i>
-      <span class="current">MRO</span>
-    </div>
-  </div>
-
   <!-- ===================== HERO MRO ===================== -->
   <header class="hero-mro">
     <div class="container position-relative">
@@ -1312,13 +1304,11 @@
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
     // Cerrar menú móvil al hacer clic en un enlace
-    document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .dropdown-item').forEach(link => {
-      link.addEventListener('click', () => {
-        const menu = document.querySelector('#menuPrincipal');
-        if (menu.classList.contains('show')) {
-          bootstrap.Collapse.getOrCreateInstance(menu).hide();
-        }
-      });
+    document.querySelector('#menuPrincipal')?.addEventListener('click', (event) => {
+      const link = event.target.closest('.nav-link:not(.dropdown-toggle), .dropdown-item');
+      if (!link) return;
+      const menu = document.querySelector('#menuPrincipal');
+      if (menu?.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
     });
 
     // Animaciones al hacer scroll
